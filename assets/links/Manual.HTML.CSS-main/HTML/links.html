@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="index.html" target="_blank">Conceito </a></li>
+                    <li><a href="elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="links.html" target="_blank">Links </a></li>
+                    <li><a href="tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="../CSS/introduçãoCSS.html" target="_blank">Ir para Introdução </a></li>
+                    <li><a href="../CSS/medidasCSS.html" target="_blank">Ir para Medidas </a></li>
+                    <li><a href="../CSS/backgroundcolor.html" target="_blank">Ir para Background </a></li>
+                    <li><a href="../CSS/boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+
+    <!--Hyperlinks: Elemento Âncora-->
+
+    <h1>Links</h1>
+
+    <h2>Elemento Âncora</h2>
+
+    <p><strong>Anatomia do link:</strong>
+        <br> &lt;a href=&quot;link vem aqui&quot;&gt;<em>&quot;Conteúdo&quot;</em>&lt;/a&gt;
+    </p>
+
+    <dl>
+        <dt>Atributos</dt>
+        <dd>- Globais (<em>title, di, class</em>)</dd>
+        <dd>- href</dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Para onde iremos ao criar o link?</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - URL completa</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Fragmento</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Email</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Telefone</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Entre outros</dd>
+        <dd>- download</dd>
+        <dd>- target</dd>
+        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- _self (padrão)</dd>
+        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- _blank (nova guia)</dd>
+    </dl>
+
+    <!--Utilizando a Tag Âncora-->
+    <h2>Utilizando a Tag Âncora</h2>
+
+    <p>Encontre-me</p>
+
+    <ul>
+        <li><a href="https://google.com" target="_blank">Site</a></li>
+        <li><a href="mailto:guibnunes0612@gmail.com" target="_blank">Email</a></li>
+        <li><a href="tel:+5551997467775">Telefone</a></li>
+    </ul>
+
+    <!--Fragmento-->
+    <h2>Fragmento</h2>
+
+    <p>O fragmento serve por exemplo para irmos apra outro menu do site, utilizando <em>id</em>
+        juntamente do destino do fragmento. Vejamos um exemplo à seguir:
+    </p>
+    <coment>&lt;!--Fragmento--&gt</coment><br>
+    <code style="font-size: large;"> &lt;p&gt;</code> Saiba mais<code style="font-size: large;"> &lt;/p&gt;</code><br>
+    <code style="font-size: large;"> &lt;ul&gt;</code><br>
+    <code style="font-size: large;"> &lt;li&gt;&lt;a</code><a> href</a>=<orange>&quot;#about&quot;</orange>&gt; Sobre mim<code style="font-size: large;"> &lt;/li&gt;</code><br>
+    <code style="font-size: large;"> &lt;li&gt;&lt;a</code><a> href</a>=<orange>&quot;#history&quot;</orange>&gt; História<code style="font-size: large;"> &lt;/li&gt;</code><br>
+    <code style="font-size: large;"> &lt;li&gt;&lt;a</code><a> href</a>=<orange>&quot;#works&quot;</orange>&gt; Trabalhos<code style="font-size: large;"> &lt;/li&gt;</code><br>
+    <code style="font-size: large;"> &lt;/ul&gt;</code><br><br>
+
+    <coment>&lt;!--Links do fragmento--&gt</coment><br><br>
+    
+    <code style="font-size: large;"> &lt;h1</code> <a>id</a>=<orange>&quot;about&quot</orange>&gt;Sobre mim&lt;/h1&gt;<br><br>
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, sed eaque sapiente maxime nemo, quis sequi natus, aliquam reprehenderit nihil. Impedit sequi, suscipit hic modi tempore cum numquam aut!"<br><br>
+    <code style="font-size: large;"> &lt;h1</code> <a>id</a>=<orange>&quot;history&quot</orange>&gt;História&lt;/h1&gt;<br><br>
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit distinctio alias exercitationem cum! Quibusdam sunt perspiciatis labore quidem incidunt quis harum obcaecati asperiores possimus, a ipsum? Corrupti dolor nulla excepturi."<br><br>
+    <code style="font-size: large;"> &lt;h1</code> <a>id</a>=<orange>&quot;works&quot</orange>&gt;Trabalhos&lt;/h1&gt;<br><br>
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis nostrum natus minus in nam accusantium molestiae non, vitae, fuga aut quaerat illo numquam voluptate autem nesciunt! Asperiores, earum repellat."<br><br>
+
+    <p>Saiba Mais</p>
+    <ul>
+        <li><a href="#about">Sobre mim</a></li>
+        <li><a href="#history">História</a></li>
+        <li><a href="#works">Trabalhos</a></li>
+    </ul>
+
+    <h1 id="about">Sobre mim</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae quas in aliquam
+    ullam dolorum, sunt necessitatibus incidunt porro voluptatem temporibus dignissimos quidem 
+    ipsa nihil illo quaerat dolorem molestiae nostrum. Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Facere quisquam maxime eaque, ex illum impedit iure voluptatibus, 
+    aliquid rem laborum incidunt non sit quia quasi voluptatem alias! Ipsa, explicabo temporibus.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum vero facere repudiandae laboriosam doloribus ipsam, consequatur tempora ex iure ipsum.
+    Veritatis vitae est officiis libero dicta id, deleniti placeat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Maxime cupiditate, consequuntur rerum rem officiis aliquam dicta aspernatur necessitatibus.
+    Amet deserunt dolor dicta delectus earum quas doloremque aut voluptates quis saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Incidunt maiores labore unde harum recusandae totam rem sint fugit repudiandae quam iure, ab cupiditate cumque inventore ullam tempora dolor.
+    Quasi, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsum sequi, expedita soluta natus alias. Deleniti alias enim ipsum neque nostrum sequi doloribus iste doloremque, vel corrupti ipsam aliquam qui?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus eveniet in numquam sequi ut pariatur voluptatum provident molestiae illo doloremque necessitatibus fuga, earum suscipit nihil architecto. 
+    Blanditiis, fugiat eos?
+    <h1 id="history">História</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae quas in aliquam
+    ullam dolorum, sunt necessitatibus incidunt porro voluptatem temporibus dignissimos quidem 
+    ipsa nihil illo quaerat dolorem molestiae nostrum. Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Facere quisquam maxime eaque, ex illum impedit iure voluptatibus, 
+    aliquid rem laborum incidunt non sit quia quasi voluptatem alias! Ipsa, explicabo temporibus.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum vero facere repudiandae laboriosam doloribus ipsam, consequatur tempora ex iure ipsum.
+    Veritatis vitae est officiis libero dicta id, deleniti placeat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Maxime cupiditate, consequuntur rerum rem officiis aliquam dicta aspernatur necessitatibus.
+    Amet deserunt dolor dicta delectus earum quas doloremque aut voluptates quis saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Incidunt maiores labore unde harum recusandae totam rem sint fugit repudiandae quam iure, ab cupiditate cumque inventore ullam tempora dolor.
+    Quasi, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsum sequi, expedita soluta natus alias. Deleniti alias enim ipsum neque nostrum sequi doloribus iste doloremque, vel corrupti ipsam aliquam qui?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus eveniet in numquam sequi ut pariatur voluptatum provident molestiae illo doloremque necessitatibus fuga, earum suscipit nihil architecto. 
+    Blanditiis, fugiat eos?
+    <h1 id="works">Trabalhos</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae quas in aliquam
+    ullam dolorum, sunt necessitatibus incidunt porro voluptatem temporibus dignissimos quidem 
+    ipsa nihil illo quaerat dolorem molestiae nostrum. Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Facere quisquam maxime eaque, ex illum impedit iure voluptatibus, 
+    aliquid rem laborum incidunt non sit quia quasi voluptatem alias! Ipsa, explicabo temporibus.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum vero facere repudiandae laboriosam doloribus ipsam, consequatur tempora ex iure ipsum.
+    Veritatis vitae est officiis libero dicta id, deleniti placeat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Maxime cupiditate, consequuntur rerum rem officiis aliquam dicta aspernatur necessitatibus.
+    Amet deserunt dolor dicta delectus earum quas doloremque aut voluptates quis saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Incidunt maiores labore unde harum recusandae totam rem sint fugit repudiandae quam iure, ab cupiditate cumque inventore ullam tempora dolor.
+    Quasi, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsum sequi, expedita soluta natus alias. Deleniti alias enim ipsum neque nostrum sequi doloribus iste doloremque, vel corrupti ipsam aliquam qui?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus eveniet in numquam sequi ut pariatur voluptatum provident molestiae illo doloremque necessitatibus fuga, earum suscipit nihil architecto. 
+    Blanditiis, fugiat eos?
+
+    <!--Conteúdo dos Hyperlinks-->
+    <h2>Conteúdo dos Hyperlinks</h2>
+
+    <p>- Pode-se colocar qualquer conteúdo no hpyerlink, além de ser possível colocar mais de um elemento
+        com o mesmo hyperlink.
+    </p>
+
+    <!--Exemplo-->
+    <P>Exemplo:</P>
+
+    <p>Tanto "Rocketseat" quanto "Acesse Aqui", levarão para o mesmo destino, a Rocketseat</p>
+
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>"https://www.google.com"</orange>
+    <links>title</links>=<orange>"Ir para Google"</orange>><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;h3&gt;</code>Rocketseat<code style="font-size: large;">&lt;/h3&gt;&lt;br&gt;</code><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;p&gt;</code>Acesse Aqui<code style="font-size: large;">&lt;/p&gt;</code><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;img</code> <links>src</links>=<orange>"https://source.unsplash.com/random"</orange> <links>alt</links>=<orange>""</orange>&gt; <br>
+    <code style="font-size: large;">&lt;/a&gt;</code>
+
+    <p>Na prática esse código resulta no que temos abaixo:</p>
+
+    <a href="https://www.google.com" title="Ir para Google" target="_blank">
+        <h3>Google</h3>
+        <p>Acesse Aqui</p>
+        <!--<img src="https://source.unsplash.com/random" alt="">-->
+    </a>
+
+    <!--URLs e Caminhos dos Arquivos-->
+    <h2>URLs e Caminhos dos Arquivos</h2>
+    
+    <p>URL: Uniform Resource Locator</p>
+    <ul>
+        <li> https://www.google.com</li>
+        <li> Sequência de texto que define onde algo está localizado na Web</li>
+    </ul>
+
+    <p> URLs usam caminhos para encontrar arquivos</p>
+    <p>Caminhos dos Arquivos:</p>
+    <ul>
+        <li>Onde, no explorador de arquivos, um recurso está localizado</li>
+    </ul>
+
+    <p>Abaixo teremos o passo a passo para abrir Hyperlinks de arquivos</p>
+
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>"index.html"</orange>
+    <links>target</links>=<orange>"_blank"</orange>>Ir para Página Inicial &lt;/a&gt;&lt;br&gt;<br>
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>"semântica.html"</orange>
+    <links>target</links>=<orange>"_blank"</orange>>Ir para Elementos HTML &lt;/a&gt;&lt;br&gt;<br>
+
+    <p>Onde o citado, na prática se torna:</p>
+
+    <a href="index.html" target="_blank">Ir para Página Inicial</a><br>
+    <a href="semântica.html" target="_blank">Ir para Elementos HTML</a><br>
+
+    <!--Acessando diferentes diretórios-->
+    <h2>Acessando diferentes diretórios</h2>
+
+    <p>Vimos acima como abrir Hyperlinks de arquivos, neste tópico iremos aprender como:</p>
+    <ol>
+        <li>Mesmo diretório</li>
+        <li>Entrando em Outro Diretório</li>
+        <li>Saindo do diretório</li>
+        <li>Diretório Raiz (pai ou root)</li>
+    </ol>
+
+    <h4>Mesmo Diretório</h4>
+
+    <p>Navegando no mesmo diretório será como criar um hyperlink para ir para outro arquivo. 
+        Conforme podemos ver no exemplo abaixo:
+    </p><br>
+    
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>&quotnome_do_arquivo&quot</orange>>
+    Arquivo na Mesma Pasta<code style="font-size: large;">&lt/a&gt</code>
+
+    <p>Neste exemplo teremos um texto que nos levará para o arquivo, que se encontra no mesmo diretório que estamos</p>
+
+    <h4>Entrando em Diretórios</h4>
+
+    <p>Para criarmos um link que puxe um arquivo de outro diretório, precisaremos primeiro, indicar
+        o nome desse diretório, conforme veremos no exemplo:
+    </p>
+
+    <code style="font-size:large">&lt;a</code> <links>href</links>=<orange>&quot;nome_do_diretório/nome_do_arquivo&quot;</orange>>
+    Arquivo de Outro Diretório<code style="font-size: large;">&lt;/a&gt</code>
+    <br><em>OBS.: Não esqueça do tipo de arquivo, como: &quot;.html&quot;</em>
+
+    <h4>Saindo de Diretórios</h4>
+
+    <p>Se estivermos em um diretório e precisarmos sair dela e ir para outro diretório, como por exmeplo um diretório acima,
+        utilizamos <em>&quot;../&quot;</em> para subirmos um diretório, podemos também usar para sair de um diretório e entrar em outro.
+        <br><br>Como no exemplo:
+    </p>
+
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>&quot;../nome_do_arquivo</orange>>Arquivo na Pasta Anterior<code style="font-size: large;">&lt;/a&gt;</code>
+    <br>Ou podemos sair do diretório atual e entrar em outro, da seguinte forma:
+    <br><code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>&quot;../Projeto/nome_do_arquivo</orange>>Arquivo na Pasta Projeto<code style="font-size: large;">&lt;/a&gt;</code>
+
+    <H4>Diretório Raiz</H4>
+    <p>Para pegarmos um arquivo do diretório raiz, ao em vez de usarmos <em>&quot;../&quot;</em> usamos apenas 1 (um) ponto.</p>
+    <p>Exemplo:</p>
+
+    <code style="font-size: large;">&lt;a</code> <links>href</links>=<orange>&quot;./nome_do_arquivo</orange>>Arquivo ### na Pasta Raiz <code style="font-size: large;">&lt;/a&gt;</code>
+
+    <p> <b style="background-color: #0089eb70;">Vale Lembrar: Trabalhando com VSCode, ele mesmo vai sugerir nome das pastas para onde ir, e seus respectivos arquivos ao entrar nela.</b></p>
+
+    <!--URLs Absolutos VS Relativos-->
+    <h2>URLs Absolutos VS Relativos</h2>
+
+    <dl>
+        <dt><b>Absolutos</b>
+            <dd><li>Inclui protocolo e nome de domínio</li></dd>
+            <dd><li>Sempre apontará para o mesmo local, pois é absoluto</li></dd>
+        </dt><b>Relativos</b>
+            <dd><li>Relativo á página aberta no momento</li></dd>
+            <dd><li>Apontará para lugares diferentes</li></dd>
+    </dl>
+    <p>No absoluto, deve-se colocar todo o caminho do arquivo, como por exemplo:</p>
+    <code style="font-size: large;">&lt;a</code>=<links>href</links>=<orange>&quothttps://google.com&quot</orange>> Absoluto para ir ao Google
+    <br>
+    <p>No relativo, ele é <em>ligado</em> à pasta, logo, se não houver um arquivo com o nome, ao ir para a URL, não encontrar o site, exemplo:</p>
+    <code style="font-size: large;">&lt;a</code>=<links>href</links>=<orange>&quot;google.com&quot;</orange>> Relativo ir para o Google.
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: flex;
+            flex-direction: column;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="">HTML</a>
+                <ul>
+                    <li><a href="conceitos.html" target="_blank">Conceito</a></li>
+                    <li><a href="elementos.html" target="_blank">Elementos</a></li>
+                    <li><a href="cabeçalho.html" target="_blank">Cabeçalho</a></li>
+                    <li><a href="links.html" target="_blank">Links</a></li>
+                    <li><a href="tabela.html" target="_blank">Tabelas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="../CSS/introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="../CSS/medidasCSS.html" target="_blank">Ir para Medidas</a></li>
+                    <li><a href="../CSS/backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="../CSS/boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+
+    <!--Cabeçalho-->
+    <h1>Cabeçalho</h1>
+    
+    <!--Head-->
+    <h2>Head</h2>
+    <dt>O cabeçalho é a parte onde vai as configurações do nosso site, mas, que não são visíveis aos usuários. </dt>
+    <dd>- Serve para fazermos configurações da nossa página, definindo estilos de letras, cores, tamanhos, etc ;</dd>
+    <dd>- Nele colocamos as informações como a <code style="font-size: large;">&lt;title&gt;</code> ,
+         que representa o Título da Página, aquele que aparece lá na aba. como por exemplo o deste que é &quot;Cabeçalho HTML&quot;</dd>
+    <dd>- Podemos adicionar links para o CSS também através da <code style="font-size: large;">&lt;head&gt;</code> ;</dd>
+    <dd>- Podemos adicionar links para a Favicon também através da <code style="font-size: large;">&lt;head&gt;</code> .</dd>
+    
+    <!--Meta-->
+    <h2>Meta</h2>
+    <dt>-A tag <code style="font-size: large;">&lt;meta&gt;</code> serve para definirmos metadados do nosso site; </dt>
+    <dt>-Imagine então que precisamos fazer certas configurações do nosso site e essas são feitas através da <code style="font-size: large;">&lt;meta&gt;</code> ; </dt>
+    <dt>-Veremos algumas configurações básicas da tag, aquelas que aparecem quando iniciamos o programa com <code style="font-size: large;">&lt;!DOCTYPE&gt;</code> ...</dt>
+
+    <!--Atributos-->
+    <h3>Atributos</h3>
+    <dt>- Charset: relacionada à codificação de caracteres especiais. Ou seja, se digitarmos algo em japonês por exemplo, alguns navegadores
+        vão interpretar o que foi escrido da mesma forma, enquanto outros, não vão conseguir interpretar isso por causa do <links>charset</links>
+        logo, se não definir o <links>charset</links> alguns navegadores poderão deixar o texto embaralhado, não deixando aparecer como deveria.
+        Um <links>charset</links> &quot;padrão&quot; seria o <orange>&quot;UTF-8&quot</orange>.</dt>
+    <dt>- Name: Responsável pela portabilidade para dispositivos móveis, ele especifíca qual <links>meta</links> está sendo utilizado.</dt>
+    <dt>- Content: vindo após do atributo <links>name</links>, o <links>content</links> apresenta o conteúdo <links>meta</links>.</dt>
+    
+    <!--Meta SEO-->
+    <h2>Meta SEO</h2>
+
+    <p>A meta SEO (Search Engine Optmization/Otimização para Motores de Busca, exemplo: Google)</p>
+        <dt>São eles:</dt>
+    <dt>- Charset: já vimos;</dt>
+    <dt>- Viewport: já vimos;</dt>
+    <dt>- Author: Define o autor da página</dt>
+    <dt>- Description: Descrição da página, aquela que aparece ao pesquisarmos por um site. Se não houver este atributo,
+        pode acontecer de pegar um texto que tenha na sua página. O ponto é que utilizando, pode-se "falar" para o Google o que
+        você quer que apareça de descrição da sua página.</dt>
+    <dt>- Robots: Utilizado para definir o que queremos que o "robô" do Google faça. Logo, quem ta trazendo os resutlados da pesquisa por
+        determinado site, etc. é esse robô.</dt>
+    <h3>Na prática:</h3>
+    <dt>Temos então:<br>
+        <!--Autor-->
+    <code style="font-size: large;">&lt;meta</code> <links>name</links>=<orange>&quot;author&quot;</orange>
+    <links>content</links>=<orange>&quot;nome_do_autor&quot;</orange>></dt>
+        <!--Descrição-->
+    <code style="font-size: large;">&lt;meta</code> <links>name</links>=<orange>&quot;description&quot;</orange>
+    <links>content</links>=<orange>&quot;descrição_do_site&quot;</orange>></dt>
+        <!--Robô-->
+    <code style="font-size: large;">&lt;meta</code> <links>name</links>=<orange>&quot;robots&quot;</orange>
+    <links>content</links>=<orange>&quot;noindex, nofollow&quot;</orange>></dt><br>
+    Perceba que para o robô utilizamos <orange>&quot;noindex, nofollow&quot;</orange> e vou explicar o que quer dizer essas duas relações.
+    Bom, <orange>&quot;nofollow</orange> serve para dizer ao robô de pesquisas do Google que não deve seguir os links que há dentro do site.
+    Já o <orange>&quot;noindex</orange> utilizamos para dizer à ele que não queremos que ele indexe a página.
+    <br>
+    <P>Fica a dúvida, quando utilizamos o <orange>robots</orange>?
+        Somente quando quisermos falar algo relacionado à isso, pois de padrão o robô já está para fazer a indexação e seguir os links da página.
+    </div></P>
+    <!--Favicon-->
+    <h2>Favicon</h2>
+    <dt>Favicon nada mais é do que aquele ícone que aparece nas nossas guias, aquela pequena imagem que acompanha o Título da Página.</dt>
+    <!--Padrão Favicon-->
+    <p>Definimos o Favicon através da tag <code style="font-size: large;">&lt;link&gt;</code> , acompanhada
+    do atributo <links>rel</links> (de relação)</p>
+    <p>Definimos o Favicon através do comando <code style="font-size: large;" title="Tag">&lt;link&</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;icon&quot;</orange> <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...&quot;</orange>>
+    </p>
+
+    <!--iPohnes, iPod Touch e Android 2.1+-->
+    <dt>Para iPhones de não retina, iPod Touch e dispositivos Android 2.1+.</dt>
+    <br>
+    <dt>Definimos o Favicon através do comando <code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon-precomposed&quot;</orange> <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...&quot;</orange>>
+    </dt>
+    <br><br>
+    <!--iPad de 1° e 2° Gen-->
+    <dt><b>Para iPads de 1° e 2° Gen, também há um processo um pouco diferente, mas não se assuste.</b></dt>
+    <br>
+        <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+            <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;48x48&quot</orange> 
+            <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...48x48&quot;</orange>>
+        </dt>
+        <br>
+        <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+            <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;72x72&quot</orange> 
+            <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...72x72&quot;</orange>>
+        </dt>
+        <br>
+        <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+            <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;96x96&quot</orange> 
+            <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...96x96&quot;</orange>>
+        </dt><br><br>
+    <!--iPhone com tela de retina de alta resolução-->
+    <dt><b>Para iPhone com tela de retina de alta resolução o processo é quase o mesmo, vejamos:</b></dt>
+    <br>
+    <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;144x144&quot</orange> 
+        <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...144x144&quot;</orange>>
+    </dt>
+    <br><br>
+    <!--iPhone de 3° Gen com tela de retina de alta resolução-->
+    <dt><b>iPhone de 3° Gen com tela de retina de alta resolução:</b></dt>
+    <br>
+    <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;192x192&quot</orange> 
+        <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...192x192&quot;</orange>>
+    </dt>
+    <br>
+    <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;256x256&quot</orange> 
+        <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...256x256&quot;</orange>>
+    </dt>
+    <br>
+    <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;384x384&quot</orange> 
+        <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...384x384&quot;</orange>>
+    </dt>
+    <br>
+    <dt><code style="font-size: large;" title="Tag">&lt;link</code> <links title="Atributo">rel</links>=
+        <orange title="Tipo de Relação">&quot;apple-touch-icon&quot;</orange> <links title="Atributo de tamanhos">sizes</links>= <orange>&quot;512x512&quot</orange> 
+        <links title="Atributo de referência">href</links>= <orange title="Caminho de onde esta a image">&quot;...512x512&quot;</orange>>
+    </dt>
+    <br><br>
+    <p>Calma, você não precisa decorar tudo isso, existem Frameworks (bibliotecas de códigos) que já possuem isso pronto para pegarmos e usarmos.
+        A questão é sabermos o que é e para que serve.
+    </p>
+
+    <!--Meta Social-->
+    <h2>Meta Social</h2>
+
+    <p>Bem por cima, é a nossa tag <code style="font-size: large;">&lt;meta&gt;</code> para redes sociais, como o Facebook, Twitter, etc.</p>
+    <!--Open Graph: Imagem-->
+    <dt><strong>Graph: Facebook</strong></dt>
+    <dt><em>- Open Graph: Imagem</em></dt>
+    <dt><code style="font-size: large;">&lt;meta</code> <links title="Proprietário">property</links>=<orange title="Open Graph : Nome do atributo que será usado">op: image</orange>
+        <links>content</links>=<orange>&quot;...&quot;</orange>>
+    </dt>
+    <dt><em>Nesse caso temo que o OP seria relacionado a uma imagem, onde o link se encontra após o <links>content</links>.</em>
+    </dt>
+    <br>
+    <!--Open Graph: Descrição-->
+    <dt><em>- Open Graph: Descrição</em></dt>
+    <dt><code style="font-size: large;">&lt;meta</code> <links title="Proprietário">property</links>=<orange title="Open Graph : Nome do atributo que será usado">op: description</orange>
+        <links>content</links>=<orange>&quot;descrição_desejada&quot;</orange>>
+    <dt><em>Aqui ele está relacionando uma descrição, caso não haja, ele buscará alguma na página</em></dt>
+    </dt>
+    <br>
+    <!--Open Graph: Título-->
+    <dt><em>Open Graph: Título</em></dt>
+    <dt><code style="font-size: large;">&lt;meta</code> <links title="Proprietário">property</links>=<orange title="Open Graph : Nome do atributo que será usado">op: title</orange>
+        <links>content</links>=<orange>&quot;título_desejado&quot;</orange>>
+        <dt><em>Usado caso queira um título em especial</em></dt>
+    </dt>
+    <br>
+    <br>
+    <!--Twitter-->
+    <dt><strong>Twitter</strong></dt>
+    <dt><em>Título</em></dt>
+    <dt><code style="font-size: large;">&lt;meta</code> <links title="Nome">name</links>=<orange title="Nome do atributo que será usado">twitter: title</orange>
+        <links>content</links>=<orange>&quot;título_desejado&quot;</orange>>
+    </body>
+</html>

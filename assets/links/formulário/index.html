@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href=".//assets/css/estilo.css">
+
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="primeira">
+               <div id="nome">Nome:<br><input class="name" type="text" required title="Nome"/></div>
+
+                <div id="email">E-mail:<br><input type="email" required title="E-mail"/></div>
+            </div>
+
+            <div class="segunda">
+                <div id="sobrenome">Sobrenome:<br><input type="text" required title="Sobrenome"/></div>
+                <div id="telefone">Telefone:<br><input type="tel" required title="number"/></div>
+            </div>
+        <div class="teste">
+            <div class="final">
+                <div id="arquivo">Currículo:<br><label for="arquivo1">Escolher arquivo</label><input type="file" id="arquivo1" title="curriculo"/></div>
+
+                <div id="aceito"><input type="checkbox" name="termos" required>
+                Eu declaro que li e aceito os termos.</div>
+
+                <button>enviar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

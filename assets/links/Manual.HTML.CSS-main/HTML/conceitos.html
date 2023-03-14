@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="index.html" target="_blank">Conceito </a></li>
+                    <li><a href="elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="links.html" target="_blank">Links </a></li>
+                    <li><a href="tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="../CSS/introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="../CSS/medidasCSS.html" target="_blank">Ir para Medidas</a></li>
+                    <li><a href="../CSS/backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="../CSS/boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+    <!--Conceitos-->
+    <h1>Conceitos</h1>
+<p>
+    &lt;!-- Isso é um comentário -->
+    <br><b>HT</b> = HyperText/ Hiper Texto
+    <br><b>M</b> = Markup
+    <br><b>L</b> = Language
+</p>
+<!--ELEMENTOS-->
+
+<h2>Elementos:</h2>
+<p>- Abertura da Tag;
+    <br>- Conteúdo da Tag;
+    <br>- Fechamento da Tag.
+</p>
+    <!--ELEMENTOS VAZIOS-->
+
+<h3>Elementos Vazios:</h3>
+<p>
+    <code style="font-size:large;">&lt;img src="" alt=""&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="password"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="text"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="button"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="color"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="datetime-local"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="email"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="file"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="image"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="radio"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="number"&gt;</code>
+    <br><code style="font-size:large;">&lt;input type="checkbox"&gt;</code>
+    <br><a href="https://developer.mozilla.org/pt-BR/ "target="_blank">Entre outras...</a>
+
+    <br><br>
+</p>
+<!--ATRIBUTOS HTML-->
+
+<h2>Atributos HTML</h2>
+<p>
+    - Informação Extra
+    <br>- Configuração
+
+    <br><br>src = atributo
+    <br>"" = o que vai ter nesse atributo
+
+
+    <br><br><code style="font-size:large;">&lt;img src="conteúdo vem aqui" alt=""&gt;</code>
+
+    <h2>Atributo Booleano:</h2>
+    <em>Não precisa de conteúdo</em>
+    <br><code style="font-size:large;">&lt;disabled&gt;</code> = Desabilitar um atributo.
+
+    <h2>Aspas:</h2>
+    - Omissão: pode ocorrer ao usar " = " em alguns casos;
+    <br>- Simples (pode dar problema com abreviações);
+    <br>- Duplas (melhor prática).
+
+    <br><br>Usa-se <code style="font-size:large;">&lt;a&gt;</code> = para links;
+    <br> href = para onde o link vai;
+    <br>target="_blank" = abre o link em uma nova guia.
+
+    <h2>Atributos Globais</h2>
+
+    <code style="font-size:large;">&lt;class&gt;</code> além de classificar as Tags,
+          é usada para aplicar estilo css e também para acessar com o Java Script.
+    <br><code style="font-size:large;">&lt;contenteditable&gt;</code> usado para editar o conteúdo da página,
+          porém não é mantido após salvar.
+    <br><code style="font-size:large;">&lt;data-*&gt;</code> usado para expandir os tipos de atributos que
+          podemos usar para fazer mais tarde lógica no Java Script ,
+          utilizado em css também.
+    <br><code style="font-size:large;">&lt;hidden&gt;</code> usado para esconder uma Tag.
+    <br><code style="font-size:large;">&lt;id&gt;</code>  usado apenas 1 por Tag para identificação,
+          para também mais tarde usar no Java Script e css.
+    <br><code style="font-size:large;">&lt;style&gt;</code>  aplica a estilização na Tag,
+          normalmente não se usa-se style dentro da Tag, 
+          mas sim em arquivos externos.
+    <br><code style="font-size:large;">&lt;tabindex&gt;</code> usado para ordenar o Tab na página.
+    <br><code style="font-size:large;">&lt;tittle&gt;</code> serve para definir um título para a Tag, quando colocamos
+          o mouse descansando em cima do conteúdo da página.
+    <br><code style="font-size:large;">&lt;strong&gt;</code> deixa em negrito
+    <br><code style="font-size:large;">&lt;b&gt;</code> deixa em negrito
+    <br><code style="font-size:large;">&lt;p&gt;</code> Serve para escrever parágrafos
+    <br><code style="font-size:large;">&lt;em&gt;</code> serve para dar ênfase.
+</p>
+
+    <!--Caracteres Reservados-->
+
+    <h2>Caracteres Reservados</h2>
+    <p>
+        <code style="font-size:large;">&lt;br> </code> quebra linha;
+        <br><class> &amp;nbsp </class> deixa um pequeno recuo, é cumulativo;
+        <br><class>&amp;lt; / &amp;gt </class> o <b>&amp;lt</b> é usado para que apareça <b>&lt</b> no texto, 
+        o <b>&amp;gt</b> é usado para que apareça <b>&gt</b> no texto;
+        <br><class>&amp;quot</class> é usado para que apareça &quot; (aspas duplas) no texto;
+        <br><class>&amp;apos</class> é usado para que apareça &apos; (aspas simples) no texto;
+    </p>
+    <!--Anatomia de um documento HTML-->
+
+    <h2>Anatomia de um documento HTML</h2>
+
+    <p>Para iniciar um documento HTML faremos a abertura dele da seguinte forma:
+        <br>
+        <br><code style="font-size:large;">&lt;!DOCTYPE html&gt;</code>
+        <br><code style="font-size:large;">&lt;html&gt;</code> (elemento root/raiz)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size:large;">&lt;head&gt;</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size:large;"> &lt;title&gt;</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;Título da página
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size:large;">&lt;/title&gt;</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size:large;">&lt;/head&gt;</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pode haver mais configurações da
+            página como por exemplo, utf-8 que diz que o documento  aceita a maior parte dos caracteres
+            possíveis.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size:large;">&lt;body&gt;</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conteúdo visual
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size:large;">&lt;/body&gt;</code>
+        <br><code style="font-size:large;">&lt;/html&gt;</code>
+        <br>
+        <br><code style="font-size:large;">&lt;!DOCTYPE html&gt;</code> Utilizado para que alguns navegadores identifique que a linguagem
+        que está sendo trabalhada é HTML5.
+        <br><code style="font-size:large;">&lt;html&gt;</code> Ela vai conter dois elementos, sendo eles o &lt;head&gt; e &lt;/head&gt;, o &lt;html&gt;
+        é o elemento que dá início à cadeia
+        <br><code style="font-size:large;">&lt;head&gt</code> Contém informações importantes da página, mas não de fato o que é visto pelo usuário.
+        <br><code style="font-size:large;">&lt;title&gt;</code> Abriga o título da página;
+        <br><code style="font-size:large;">&lt;body&gt;</code> Contém informações, dados, textos que o usuário pode ver;
+        <br><class>lang</class> define a linguagem do site/documento;
+        <br><class>meta</class> configura metadados como <b>charset="utf-8"</b> para definir os tipos de caracteres permitidos,
+        ou <b>name="viewport"</b> define que o site será visto tanto em dispsitivos móveis quanto em dispsitivos
+        maiores, exemplo desktop;
+        <br>
+        <br> Para que não tenha que digitar tudo isso sempre ao iniciar um novo documento, basta digitar " ! " 
+        <br> O VSCode entende e completa.
+    </p>
+</body>
+</html>

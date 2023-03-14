@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        div{
+            text-align: center;
+        }
+        div nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        div nav ul{
+           float: left;
+        }
+        div nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        div nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        div nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        div nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        div nav ul li:hover ul{
+            display: block;
+        }
+        div nav ul li ul li{
+            width: 120px;
+            border-radius: 4px;
+        }
+        div nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        div nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <div>
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="../HTML/conceitos.html" target="_blank">Conceito </a></li>
+                    <li><a href="../HTML/elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="../HTML/cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="../HTML/links.html" target="_blank">Links </a></li>
+                    <li><a href="../HTML/tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="introduçãoCSS.html" target="_blank">Introdução</a></li>
+                    <li><a href="medidasCSS.html" target="_blank">Medidas </a></li>
+                    <li><a href="backgroundcolor.html" target="_blank">Background</a></li>
+                    <li><a href="boxmodel.html" target="_blank">Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+    </div>
+
+    <!--Box Model-->
+    <h1>Box Model</h1>
+    <dt>- Fundamental para fazer layouts para Web.</dt>
+    <dt>- Maior facilidade para aplicar o CSS</dt>
+
+    <!--O que é?-->
+    <h2>O que é?</h2>
+    <dl>Uma caixa retangular.
+    <dt>Essa caixa possui propriedades de uma caixa (2D)
+        <dd><b>1.</b> Tamanho (largur x altura) = width | height</dd>
+        <dd><b>2.</b> Conteúdo = content</dd>
+        <dd><b>3.</b> Bordas = border</dd>
+        <dd><b>4.</b> Preenchimento Interno = padding</dd>
+        <dd><b>5.</b> Espaços fora da caixa = margin</dd>
+        <br>
+    <em>OBS.: Cada elemento na sua página, será considerado uma box (caixa).</em>
+    </dt>
+
+    <!--Box Sizing-->
+    <h2>Box Sizing</h2>
+    <dt>Como será calculado o tamnho da caixa:
+        <dd><links>- content-box | border-box</links></dd>
+    </dt><br>
+    <orange>CSS:</orange><br>
+    <code style="font-size: large;">div</code> {
+    <br>
+        box-sizing: <links>border-box</links>;
+    <br>
+    }
+
+    <!--Display: block vs Display: inline-->
+    <h2>Display Block & Display Inline</h2>
+    <dt>- Como as caixas se comportam em relação às outras;</dt>
+    <dt>- Como é o comportamento externo das caixas.</dt>
+
+    <!--Block-->
+    <h4 style="color: black;">Block</h4>
+    <dt><B>1.</B> Ocupa toda a linha, colocando o próximo elemento abaixo desse;</dt>
+    <dt><B>2.</B> Width e height são respeitados;</dt>
+    <dt><B>3.</B> Padding, margin, border vão funcionar normalmente.</dt>
+
+    <!--Inline-->
+    <h4 style="color: black;">Inline</h4>
+    <dt><B>1.</B> Elemento um do lado do outro;</dt>
+    <dt><B>2.</B> Width e height não funcionam;</dt>
+    <dt><B>3.</B> Apenas valores horizontais de margin, padding e border.</dt>
+    <br>
+    <dt>Exemplo:
+        <dd>Block: <code style="font-size: large;">&lt;p&gt; &lt;div&gt; &lt;section&gt;</code>, todos headings 
+            <code style="font-size: large;">&lt;h1&gt; &lt;h2&gt; ...</code>
+        </dd>
+        <dd>Inline: <code style="font-size: large;">&lt;a&gt; &lt;strong&gt; &lt;span&gt; &lt;em&gt;</code>
+        </dd>
+    </dt>
+
+    <!--Margin-->
+    <h2>Margin</h2>
+    <dt>Margin quer dizer espaços entre os elementos:
+        <dd>- margin-top |margin-right | margin-bottom | margin-left</dd>
+        <dd>- values: <code style="font-size: large;">&lt;length&gt;</code> | <code style="font-size: large;">&lt;percentage&gt;</code> | auto</dd>
+    </dt>
+    <br>
+    <em>OBS.: cuidado com &quot;margin collapsing&quot; (margin-top se junta à margin-bottom).</em>   
+
+    <p>Veja mais sobre margin em: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/margin">Margin MDN</a></p>
+
+    <!--Padding-->
+    <h2>Padding</h2>
+    <dt>Representa o preenchimento interno da caixa
+        <dd>- padding-top | padding-right | padding-bottom | padding-left</dd>
+        <dd>- values: <code style="font-size: large;">&lt;length&gt;</code> | <code style="font-size: large;">&lt;percentage&gt;</code></dd>
+    </dt>
+    <br>
+    <em>OBS.: Padding poderá causar diferenças na largura de um elemento.</em>
+
+    <p>Veja mais sobre padding em: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/padding">Padding MDN</a></p>
+
+    <!--Border e Outline-->
+    <!--Border-->
+    <h2>Border (e outline)</h2>
+    <dt>São as bordas das caixas
+        <dd>- Value: <code style="font-size: large;">&lt;border-style&gt;</code> | <code style="font-size: large;">&lt;border-width&gt;</code> | <code style="font-size: large;">&lt;border-color&gt;</code></dd>
+        <dd>- Style: solid | dotted | dashed | double | groove | ridge | inset | outset</dd>
+        <dd>- Width: <code style="font-size: large;">&lt;length&gt;</code></dd>
+        <dd>- Color: <code style="font-size: large;">&lt;color&gt;</code></dd>
+    </dt>
+
+    <!--Outline-->
+    <h3>Outline</h3>
+    <dt>Difere em 4 sentidos:
+        <dd>- Não modifica o tamanho da caixa, pois é parte do Box Model;</dd>
+        <dd>- Poderá ser diferente de retangulas;</dd>
+        <dd>- Não permite ajuste individuais;</dd>
+        <dd>- Mais usado pelo user agente para acessibilidade.</dd>
+    </dt>
+
+    <p>Veja mais sobre border em: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">Border MDN</a></p>
+
+</body>
+</html>

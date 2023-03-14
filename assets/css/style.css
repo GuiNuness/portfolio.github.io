@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000226; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+/*Formatação Diversa*/
+.title{
+    color: #fff;
+    font-family: 'Dancing Script';
+    line-height: 85%;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.text{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    color: #fff;
+    margin-top: 15px;
+    width: 520px;
+    text-align: center;
+    font-size: 14.7px;
+    letter-spacing: 0.5px;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 11, 75, 0.527);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #0c009186;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0027a8;
+}
+
+/*Cabeçalho*/
+.header{
+    width: 99vw;
+    height: auto;
+    background-color: #05004F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px #1300e886;
+}
+
+.hesquerda{
+    margin-left: 70px;
+}
+
+.hDireita{
+    margin-right: 70px;
+}
+
+.header a img{
+    background-color: #05004F;
+}
+
+.header a img:hover{
+    background-color: #1b10be;
+    border-radius: 50%;
+}
+
+/*Banner*/
+.banner{
+    display: flex;
+    align-items: center;
+    padding-right: 35px;
+}
+
+.banner img{
+    margin-bottom: 55px;
+    width: auto;
+    margin-left: auto;
+}
+
+.about{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background: #00022b;
+    box-shadow:19px 18px 36px -10px rgba(13, 0, 151, 0.753),
+    -33px -28px 31px -23px rgba(0, 0, 0, 0.514);
+    border-radius: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Conhecimentos*/
+.conhecimento{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    padding-right: 35px;
+}
+
+.cardConhecimento{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background: #00022b;
+    box-shadow:19px 18px 36px -10px rgba(13, 0, 151, 0.753),
+    -33px -28px 31px -23px rgba(0, 0, 0, 0.514);
+    border-radius: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.list li{
+    font-family: 'Nunito';
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.conhecimento img{
+    margin: auto;
+}
+
+/*Projetos*/
+.projeto{
+    margin: auto;
+    margin-top: 30px;
+    width: 80vw;
+    height: auto;
+    background: #00022b;
+    box-shadow:19px 18px 36px -10px rgba(13, 0, 151, 0.753),
+    -33px -28px 31px -23px rgba(0, 0, 0, 0.514);
+    border-radius: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto div{
+    display: grid;
+    grid-template-areas: 
+        "projeto-area1 projeto-area2"
+        "projeto-area3 projeto-area3"
+    ;
+}
+
+.projeto-area1, .projeto-area2, .projeto-area3{
+    display: flex;
+    justify-content: center;
+}
+
+.title-projeto{
+    color: #fff;
+    font-family: "Dancing Script";
+    font-size: 26px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.capa{
+    width: 85%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow:0px 0px 40px 10px rgba(8, 0, 117, 0.753);
+    margin-bottom: 20px;
+    margin-left: 7.5%;
+}
+
+.capa:hover{
+    transform: scale(1.02);
+    transition: 0.1s;
+}
+
+.butao-chato{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #190dbd;
+    color: #fff;
+    box-shadow: rgba(38, 0, 255, 0.842) 0 0 10px 2px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    margin-bottom: 20px;
+}
+   
+button:hover {
+    letter-spacing: 1px;
+    background-color: hsl(244, 87%, 38%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(15, 28, 221) 0px 0px 29px 0px;
+}
+   
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(241, 84%, 51%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 44, 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+footer{
+    margin-top: 70px;
+    width: calc(100vw - 10px);
+    height: 70px;
+    background: #00022b;
+    box-shadow: 0px 18px 36px -10px rgba(13, 0, 151, 0.753),
+    0px -35px 31px -25px rgba(13, 0, 151, 0.753);
+}
+
+footer div{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.title-contato{
+    color: #fff;
+    font-family: 'Dancing Script';
+    line-height: 85%;
+    font-size: 36px;
+}
+
+footer div div{
+    background-color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+@media (min-width: 1600px) {
+    .projeto{
+        width: 1300px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .banner img{
+        width: 500px;
+    }
+    .about{
+        width: 400px;
+        height: auto;
+        margin: auto;
+    }
+    .banner h1{
+        font-size: 30px;
+    }
+    .banner p{
+        font-size: 10px;
+        width: 390px;
+        margin-top: 5px;
+        padding-bottom: 15px;
+    }
+
+
+    .conhecimento{
+        margin-bottom: 60px;
+    }
+
+    .cardConhecimento{
+        width: 350px;
+        height: 350px;
+        margin: auto;
+        margin-left: 100px;
+    }
+    .cardConhecimento h1{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .cardConhecimento li{
+        font-size: 13px;
+    }
+
+    .conhecimento img{
+        width: 200px;
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header{
+        width: calc(100% -10px);
+    }
+    .footer{
+        width: calc(100% -10px);
+    }
+}
+
+@media (max-width: 800px) {
+    .banner{
+        flex-direction: column;
+    }
+
+    .conhecimento{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cardConhecimento{
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 400px;
+    }
+
+    .conhecimento img{
+        margin-left: 215px;
+        margin-top: 25px;
+        margin-bottom: -50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner, .conhecimento{
+        margin-left: 40px;
+    }
+
+    .projeto div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .butao-chato{
+        margin: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .header h1{
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .banner img{
+        width: 350px;
+        margin-left: -15px;
+    }
+
+    .about{
+        width: 300px;
+        height: 300px;
+        margin-left: 50px;
+    }
+    .about h1, .cardConhecimento h1{
+        font-size: 22px;
+    }
+    .about .text{
+        margin-top: 15px;
+        font-size: 9.155px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .cardConhecimento{
+        width: 300px;
+        height: 300px;
+        margin-bottom: -35px;
+    }
+    .cardConhecimento .title{
+        margin-bottom: -10px;
+    }
+    .cardConhecimento li{
+        font-size: 10px;
+    }
+
+    .conhecimento img{
+        display: none;   
+    }
+
+    .title-projeto{
+        margin-bottom: 5px;
+    }
+    .butao-chato{
+        margin-top: -15px;
+    }
+
+    .title-contato{
+        font-size: 26px;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="../HTML/conceitos.html" target="_blank">Conceito </a></li>
+                    <li><a href="../HTML/elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="../HTML/cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="../HTML/links.html" target="_blank">Links </a></li>
+                    <li><a href="../HTML/tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="medidasCSS.html" target="_blank">Ir para Medidas </a></li>
+                    <li><a href="backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+    <!--Introdução-->
+    <h1>Medidas CSS</h1>
+    <p>Nesta página você verá como funcionam as unidades de medida e valores no CSS. Exemplo: Tipos numéricos, Unidades comuns
+        Distância absoluta/relativa entre os elementos, Porcentagens, entre outros.
+    </p>
+
+    <!--Valores e Unidades de Medida-->
+    <h2>Valores e Unidades de Medidas</h2>
+    <p>Como vimos no decorrer até aqui, sabemos que cada propriedade possui valores, que descrevemos como <orange>
+        &quot;property: value&quot;</orange>. Entender unidades e valores do CSS leva tempo e estudo, então
+        calma pois pode passar o tempo e você descobrir algo que nunca nem tinha ouvido falar em CSS.<br>
+        Precisamos entender como utilziar os valores possíveis dentro de cada propriedade.
+    </p>
+    <h3>Na Prática</h3>
+    <p>Como podemos conhecer e estudar esses valores e como podemos usar a documentação do MDN para aprender mais.
+    <br>Sempre que virmos <orange>&lt;color&gt;</orange> e <orange>&lt;lenght&gt;</orange> estaremos falando de valores (values)
+        ou tipos de dados (data types).
+        <br>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/color" target="_blank">Acesse o Site MDN</a>
+    </p>
+    
+    <!--Tipos Numéricos e Unidades Comuns-->
+    <h2>Tipos Numéricos e Unidades Comuns</h2>
+
+    <h3>Tipos Numéricos</h3>
+
+    <dt><code style="font-size: large;">&lt;integer&gt;</code>
+        <dd>Número inteiro como: 18 ou -54</dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;number&gt;</code>
+        <dd>Número decimal como: 3.14, 84 ou 0.218</dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;dimension&gt;</code>
+        <dd>É um <code style="font-size: large;">&lt;number&gt;</code> com uma unidade junto:
+            60deg (60°), 7s (7 segundos), 10px (10 pixels)
+        </dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;percentagem&gt;</code>
+        <dd>Fração de um número: 15% , 50% , 99% ... <em>Sempre precisamos ter uma referência para colocar a porcentagem</em>
+        </dd>
+    </dt>
+
+    <h3>Unidades Comuns</h3>
+    
+    <dt><code style="font-size: large;">&lt;lenght&gt;</code>
+        <dd>Valor de distância: <orange>px, em, vw</orange></dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;angle&gt;</code>
+        <dd>Ângulo: <orange>deg, rad, turn <em>(giro)</em></orange></dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;time&gt;</code>
+        <dd>Tempo: <orange>s, ms</orange></dd>
+    </dt>
+    <dt><code style="font-size: large;">&lt;resolution&gt;</code>
+        <dd>Resoluções para dispositivos: <orange>dpi <em>(responsividade)</em></orange></dd>
+    </dt>
+
+    <!--Distâncias Absolutas e Relativas-->
+    <h2>Distâncias Absolutas e Relativas</h2>
+
+    <h3>Distâncias Absolutas: &lt;lenght&gt;</h3>
+    <p>São fixas e não se altera o valor delas.</p>
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: gold;">
+            <col span="1"style="background-color: orange">
+            <col span="1"style="background-color: brown ">
+        </colgroup>
+        <thead>
+            <tr>
+                 <th colspan="1" scope="colgroup"> Unidade</th>
+                 <th colspan ="1" scope="colgroup"> Nome </th>
+                 <th colspan ="1" scope="colgroup"> Equivalência </th>
+            </tr>
+       </thead>
+       <tbody>
+        <tr>
+            <td scope="col"> cm </td>
+            <td scope="col"> Centímetros </td>
+            <td scope="col"> 1cm = 96px/2.54 </td>
+       </tr>
+       <tr>
+            <td scope="col"> in </td>
+            <td scope="col"> Inches (polegadas) </td>
+            <td scope="col"> 1in = 2.54cm = 96px </td>
+        </tr>
+        <tr>
+            <td scope="col"> px </td>
+            <td scope="col"> Pixels </td>
+            <td scope="col"> 1px = 1/96th de 1in </td>
+       </tr>
+        </tbody>
+    </table>
+
+    <p><em>OBS.: O mais comum e utilizado é o <orange>px</orange>. Não é recomendado o uso de <orange>cm</orange></em></p>
+    
+    <!--Distâncias Relativas-->
+    <h3>Distâncias Relativas</h3>
+
+    <p>São relativas a algum outro valor, logo, esse valor pdoe ser o elemento pai/root, ou o tamanho da tela.<br>
+    Um ponto positivo é que tem uma maior adaptação aos tipos de tela.</p>
+
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: #22cbff;">
+            <col span="1" style="background-color: #00ff37;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="1" scope="colgroup">Unidade</th>
+                <th colspan="1" scope="colgroup">Relativo a</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">em</td>
+                <td colspan="1" scope="colgroup">Tamando da font do pai</td>
+            </tr>
+            <tr>
+                <td scope="col">rem</td>
+                <td colspan="1" scope="colgroup">Tamando da font da raiz (root/html)</td>
+            </tr>
+            <tr>
+                <td scope="col">vw</td>
+                <td colspan="1" scope="colgroup">1% de viewport width</td>
+            </tr>
+            <tr>
+                <td scope="col">vh</td>
+                <td colspan="1" scope="colgroup">1% da viewport height</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <em>OBS.: Viewport é toda a tela, width é a largura, height é a altura.</em>
+    <h3>Na Prática</h3>
+
+    <code style="font-size: large;">&lt;style&gt;</code>
+    <br>
+    <code style="font-size: large;">div</code> {<br>
+    <links>&nbsp;&nbsp;&nbsp;&nbsp; font-size</links>: <orange>16px</orange>;<br>
+    }<br>
+    <code style="font-size: large;">p</code> {<br>
+        <links>&nbsp;&nbsp;&nbsp;&nbsp; font-size</links>: <orange>2em</orange>;<br>
+    }<br>
+    <code style="font-size: large;">&lt;/style&gt;</code>
+    <br><br>
+    <code style="font-size: large;">&lt;body&gt;</code><br>
+    <code style="font-size: large;">&nbsp;&nbsp;&nbsp;&lt;div&gt;</code>
+    <br>
+    <code style="font-size: large;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</code>Parágrafo<code style="font-size: large;">&lt;/p&gt;</code>
+    <br>
+    <code style="font-size: large;">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code>
+    <br>
+    <code style="font-size: large;">&lt;/body&gt;</code>
+
+    <h4>Resultado</h4>
+    <div style="font-size: 18px;">
+        <p style="font-size: 2em;">Parágrafo</p>
+    </div>
+
+    <em>Ou seja, multiplicamos o valor da <orange>&lt;div&gt;</orange> por 2.</em>
+
+    <!--Porcentagem-->
+    <h2>Porcentagem</h2>
+    <p>É tratado da mesma maneira que as distâncias <orange>&lt;lenght&gt;</orange>, sempre será relativo a um valor.</p>
+    
+    <!--Posições-->
+    <h2>Posições</h2>
+    <p><orange>&lt;position&gt;</orange>
+        <dt>Representa um conjunto de coordenadas <em>2D</em> como:
+            <dd>- top, right, bottom, left, center.</dd>
+        </dt><br>
+        <em>OBS.: Usado para alguns tipos de propriedades, <b>cuidado</b> para não confundir com a propriedade <orange>position</orange></em>
+    </p>
+
+    <!--Funções-->
+    <h2>Funções</h2>
+    <p>Causam um reaproveitamento de código.
+        <br>Exemplos de funções:<br>
+        rgb( )<br>
+        hsl( )<br>
+        url( )<br>
+        calc( )<br>
+        - Recebe um nome como os citados, abre e fecha parentesis e dentro deles colocamos os valores.
+    </p>
+
+    <!--Strings e Identificadores-->
+    <h2>Strings e Identificadores</h2>
+    <p>São outros tipos de valores que podemos ter dentro do CSS, sendo:
+    <br><b>Strings</b>: Texto envolto em aspas
+    <br><b>Identificadores</b>: red, black, gold
+    </p>
+
+</body>
+</html>

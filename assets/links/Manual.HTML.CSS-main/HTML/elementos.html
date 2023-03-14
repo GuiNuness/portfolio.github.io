@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="index.html" target="_blank">Conceito </a></li>
+                    <li><a href="elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="links.html" target="_blank">Links </a></li>
+                    <li><a href="tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="../CSS/introduçãoCSS.html" target="_blank">Ir para Introdução </a></li>
+                    <li><a href="../CSS/medidasCSS.html" target="_blank">Ir para Medidas </a></li>
+                    <li><a href="../CSS/backgroundcolor.html" target="_blank">Ir para Background </a></li>
+                    <li><a href="../CSS/boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+
+    <h1>Trabalhando com Elementos HTML</h1>
+
+    <!--Semântica-->
+    <h2>Semântica</h2>
+
+    <p>
+        <br>Dar significado
+        <br>Elementos Semâmticos
+        <br>&quot;Quando o HTML é feito de forma bem estruturada, de forma semântica, tem-se
+        melhores resultados.&quot;
+        <h4><b>Perguntas que podem serem feitas para se pensar de forma semântica:</b></h4>
+        <b>1. Quais são os elementos que melhor descrevem o que farei?
+        <br>2. Farei um título? (se sim, terei de usar &quot;tal&quot elemento).
+        <br>3. Colocarei aqui um elemento do lado do outro?
+        <br>4. Farei uma lista? Ela tem ordem?
+        <br>5. Farei um artigo? Então precisarei separar sessões.
+        <br>6. Minha página tera um cabeçalho? Um rodapé?</b>
+    </p>
+
+    <!--Cabeçalhos e Parágrafos-->
+
+    <h2>Cabeçalhos e Parágrafos</h2>
+
+    <p>Temos 6 tamanhos diferentes para usarmos em títulos, sendo eles: h1, h2, h3, h4, h5 e h6.
+        Sendo h1 o <b>maior</b> e h6 o <b>menor</b>.
+    </p>
+
+    <!--Listas-->
+
+    <h2>Listas</h2>
+
+    <h3>Ordenadas e Não ordenadas.</h3>
+
+    <t><b>Exemplo de Lista Não Ordenada:</b></t>
+    <p>
+    <b>-> Suco Detox:</b>
+    
+    <li>3 Folhas de couve;</li>
+    <li>1 Laranja;</li>
+    <li>1 Pedaço de gengibre;</li>
+    <li>300ml de água;</li>
+    <li>Adoçante a gosto;</li>
+    <li>Gelo a gosto.</li>
+    
+    <br>Usamos <code style="font-size:large;">&lt;li&gt</code>; para adicionarmos uma formatação de lista. Podemos também multiplicar o <code style="font-size:large;">&lt;li&gt;</code>
+    pela quantidade de vezes que forem necessárias. digitando por exemplo: li*(número).
+    </p>
+    Podemos tornar essa lista ordenada colocando a condição <code style="font-size:large;">&lt;li&gt</code>, dentro da condição  <code style="font-size:large;">&lt;ol&gt;</code>, pois
+    ela vai <b>ordenar</b> essa lista como podemos ver em seguida:
+    <p><b>-> Suco Detox:</b>
+    <ol>
+        <li>3 Folhas de couve;</li>
+        <li>1 Laranja;</li>
+        <li>1 Pedaço de gengibre;</li>
+        <li>300ml de água;</li>
+        <li>Adoçante a gosto;</li>
+        <li>Gelo a gosto.</li>
+    </ol>
+    </p>
+    Perceba que teve um recuo ao adicionarmos a condição <code style="font-size:large;">&lt;ol&gt</code>, esse recuo pode haver também sem
+    a necessidade de tornar essa lista ordenada. Façamos da seguinte forma:
+    <p>No lugar da condição <code style="font-size:large;">&lt;ol&gt</code>, utilizaremos a condição <code style="font-size:large;">&lt;ul&gt</code>. Ela mantera os pontos no 
+        lugar dos números e adicionará os recuo como podemos observar à seguir:
+    </p>
+    <b>-> Suco Detox:</b>
+
+    <ul>
+        <li>3 Folhas de couve;</li>
+        <li>1 Laranja;</li>
+        <li>1 Pedaço de gengibre;</li>
+        <li>300ml de água;</li>
+        <li>Adoçante a gosto;</li>
+        <li>Gelo a gosto.</li>
+    </ul>
+
+    <!--Citações-->
+
+    <h2>Citações</h2>
+
+    <t><b>
+        <ul>
+            <code style="font-size:large;"><li>&lt;blockquote&gt;</code> : Para
+            uma citação que você queira deixa maior, tendo uma estilização mais diferente.</li>
+            <li><code style="font-size:large;">&lt;cite&gt;</code> : Tag usada
+                para colocar o citar link direto no texto.</li>
+            <li><code style="font-size:large;">cite</code> : Atributo usado para citar a url.</li>
+            <li><code style="font-size:large;">&ltq&gt</code> : Citações curtas com aspas.</li>
+        </ul>
+    </b></t>
+
+    <p><b>Exemplo Blockquote:</b></p>
+    <blockquote cite="https://www.rocketseat.com.br/discover">
+        <p>
+            O <b>Elemento HTML</b><code style="font-size: large;"> &lt;bloquote&gt;</code> (ou <em>HTML Block Quoation
+                Element</em>) indica que um texto externo foi citado.
+        </p>
+    </blockquote>
+
+    <p><b>Exemplo Cite:</b></p>
+    <p>De acordo com <a href="https://www.rocketseat.com.br/discover">
+        <cite>
+            Página Rocketseat
+        </cite></a>
+    </p>
+    <p>O elemento quote — <code style="font-size: large;">&lt;q&gt;</code> — é <q cite="https://www.rocketseat.com.br/discover">
+        usado para citações curtas que não precisam de parágrafos ou quebras de linha.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+        <cite>Rocketseat</cite></a>.
+    </p>
+
+    <!--Abreviações-->
+
+    <h2>Abreviações</h2>
+
+    <p><code style="font-size: large;">&lt;abbr&gt;</code> : Utilização para criar abreviação de
+         palavras se colocarmos o mouse em cima da abreviação, teremos a palavra inteira.
+    </p>
+
+    <p><b>Exemplo Abbr:</b></p>
+
+    <p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr>
+        para estruturar nossos documentos da web.
+    </p>
+
+    <!--Detalhes de Contato-->
+
+    <h2>Detalhes de Contato</h2>
+
+    <p><code style="font-size: large;">&lt;address&gt;</code> : A tag usada para apenas colocar detalhes de contato,
+    não endereço em si, mas por exemplo o autor da página.
+   </p>
+
+   <p><b>Exemplo Address:</b></p>
+
+   <address>
+    <p>Guilherme B. Nunes <br>
+    <strong>São Leopoldo, RS</strong>
+    </p>
+</address>
+
+    <!--Listas de Descrição-->
+
+    <h2>Listas de Descrição</h2>
+
+    <p><code style="font-size: large;">&lt;dl&gt;</code> : Tag para <em>lista</em> de descrição.<br>
+    <code style="font-size: large;">&lt;dt&gt;</code> : Tag para o <em>termo</em> de descrição.<br>
+    <code style="font-size: large;">&lt;dd&gt;</code> : Tag para a descrição.
+    </p>
+
+    <p><b>Exemplo Lista de Descrição:</b></p>
+
+    <h4>Glossário</h4>
+    <code style="font-size: large;">&lt;dl&gt;</code><br>
+    &nbsp;&nbsp;&nbsp; <code style="font-size: large;">&lt;dt&gt; </code> Hypertext <code style="font-size: large;">&lt;/dt&gt;</code><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;"> &lt;dd&gt; </code>
+    É um hiper texto com possibilidades...<code style="font-size: large;"> &lt;/dd&gt; </code><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size: large;"> &lt;dt&gt; </code> Markup
+    <code style="font-size: large;"> &lt;/dt&gt; </code><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size: large;"> &lt;dd&gt; </code>
+    Marcação do Texto <code style="font-size: large;"> &lt;/dd&gt; </code><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size: large;"> &lt;dt&gt; </code> Languague <code style="font-size: large;"> &lt;/dt&gt;</code><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code style="font-size: large;"> &ltdd&gt; </code>
+    com sua semântica e sintaxe.... <code style="font-size: large;"> &lt;/dd&gt; </code><br>
+    <code style="font-size: large;"> &lt;/dl&gt; </code>
+
+    <!--Representação de código-->
+
+    <h2>Representação de código</h2>
+
+    <p><code style="font-size: large;">&lt;code&gt;</code> : Muda a cor do conteúdo para representar o código.<br>
+    <code style="font-size: large;">&lt;pre&gt;</code> : Tag para criar um bloco de código, mantendo espaços
+        em branco.
+    </p>
+
+    <p><b>Exemplo Representação de código:</b></p>
+
+    <p><code style="font-size: large;">&lt;pre><br>
+        &nbsp;&nbsp;&nbsp;&lt;code>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;lt>
+        <br>&nbsp;&nbsp;&nbsp;&lt;code>
+        <br>&lt;pre></code>
+    </pre></p>
+
+    <!--Elementos Genéricos-->
+
+    <h2>Elementos Genéricos</h2>
+    
+    <p><code style="font-size: large;">&lt;div&gt;</code> : Tag usada para agrupar conteúdo em forma de blocos.<br>
+    <code style="font-size: large;">&lt;span&gt;</code> : Tag usada para agrupar conteúdo (<em>normalmente textos</em>)
+    em forma de linha.
+    </p>
+
+    <p><b>Exemplo de elementos genéricos:</b></p>
+
+    <P><code style="font-size: large;">&lt;div class="cart"></code><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;span></code> Camiseta
+        <code style="font-size: large;">&lt;/span></code><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&ltspan></code> $ 99,00
+        <code style="font-size: large;"> &lt;/span></code><br>
+    <code style="font-size: large;">&lt;/div></code>
+</body>
+</html>

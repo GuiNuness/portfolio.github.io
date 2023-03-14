@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, pass generator">
+    <title>Gerador de Senha</title>
+
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+    <div class="corpo">
+        <img class="logo" src="./assets/img/logo.png" alt="Gerador de senha logo">
+
+        <main class="container-input">
+            <span>Tamanho <span id="valor"></span> caracteres</span>
+            <input id="slider" class="slider" type="range" min="5" max="30" value="12">
+
+            <button id="button" class="button-cta" onclick="generatePassword()">Gerar Senha</button>
+        </main>
+
+        <div id="container-password" class="container-password hide">
+            <span class="title">Sua senha gerada foi:</span>
+            <span id="password" class="password" onclick="copyPassword()"></span>
+            <span class="tooltip">Clique na senha para copiar. 😊</span>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="instagram"> <a href="https://www.instagram.com/nunesg06">Instagram</a></div>
+
+        <div class="autor">
+            Autor: Guilherme Bolzan Nunes
+        </div>
+
+        <div class="email"><a href="mailto:guibnunes0612@gmail.com">Email</a></div>
+        
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

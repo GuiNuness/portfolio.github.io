@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="../HTML/conceitos.html" target="_blank">Conceito </a></li>
+                    <li><a href="../HTML/elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="../HTML/cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="../HTML/links.html" target="_blank">Links </a></li>
+                    <li><a href="../HTML/tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="medidasCSS.html" target="_blank">Ir para Medidas </a></li>
+                    <li><a href="backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+
+    <!--Introdução: O que é CSS?-->
+    <h1>Introdução</h1>
+    <h2>O que é CSS?</h2>
+    <dt>- CSS (é um acrônimo para: Cascading Style Sheet), para o português seria: um jeito de escrever uma folha de estilo em cascata.</dt>
+    <dt>- É um código para cirar estilos para o nosso HTML;</dt>
+    <dt>- HTML é a estrutura do documento, CSS é o que da a cor, a beleza para ele;</dt>
+    <dt>- CSS não é uma linguagem de programação, mas dizemos que ele é uma linguagem Style Sheet.</dt>
+    <dt>- Se você quiser praticar o CSS em conjunto com o HTML e JS, recomendo o site: <a href="https://codepen.io/">Codepen</a></dt>
+    <br>
+    <h3>Exemplo Básico:</h3>
+    <dt>Imagine que você tem em seu código o seu título da página, e você quer mudar a cor dele:</dt>
+    <code style="font-size: large;">&lt;h1&gt;</code>Título da Página<code style="font-size: large;">&lt;/h1&gt;</code>
+    <br>
+    <em>Perceba que <code style="font-size: large;">&lt;h1&gt;</code> é a tag utilizada, para mudar sua cor através do CSS fariamos o seguinte:</em>
+    <br>
+    <code style="font-size: large;">h1</code> {<br><links>color</links>:  <orange>blue</orange><br>}
+    <dt>Como resultado teremos:</dt>
+    <br>
+    <DT style="font-size: x-large; color: blue;"><b>Título da Página</b></DT>
+    <br>
+    <dt>Pronto, agora você já tem uma noção do que é o CSS na prática.</dt>
+
+    <!--Adicionando CSS-->
+    <h2>Adicionando CSS em docs HTML</h2>
+
+    <p>Temos 4(quatro) formas de adicionarmos CSS em nossos códigos HTML, veja quais são elas:</p>
+    <dt><orange>##inline</orange>: atributo Style;</dt>
+    <dt><orange>##style</orange>: tag html que vai conter o CSS;</dt>
+    <dt><orange>## &lt;link&gt;</orange>: arquivos externos;</dt>
+    <dt><orange>##import</orange>: arquivo de CSS externo.</dt>
+
+    <!--Exemplo Add CSS p/ linha-->
+    <p>Um dos jeitos de adicionar o CSS ao HTML é colocando ele todo por linhas, como assim? Veja:</p>
+    <dd><code style="font-size: large;">&lt;h1</code> <links>style</links>= <orange>&quot;color: greenyellow&quot;</orange>><br>
+        Exemplo <br>
+        <code style="font-size: large;">&lt;strong</code> <links>style</links>= <orange>&quot;color: brown&quot;</orange>><br>
+        Aqui
+        <dd><code style="font-size: large;">&lt;/h1&gt;</code></dd>
+    </dd>
+    <h4>Resultado:</h4>
+
+    <dt style="color: greenyellow;"><b>Exemplo <span style="color: brown;">Aqui</span></b></dt>    
+    <p>--------------------------------------------------------------------------------------------------------------</p>
+    <!--Exemplo Add CSS p/ Style-->
+    <p>Outro jeito é adicionando através da tag <code style="font-size: large;">&lt;style&gt;</code> que se localiza
+    na <code style="font-size: large;">&lt;head&gt;</code>. Exemplo:</p>
+
+    <code style="font-size: large;">&lt;style&gt;</code><br><dd>h1 {<br><links>color</links>: blue<br>}</dd>
+    <br><dd>strong {<br><links>color</links>: red<br>}</dd><code style="font-size: large;">&lt;/style&gt;</code>
+    <br>
+    <h4>Resultado:</h4>
+    <span style="color: blue;"><b>Exemplo</span> <span style="color: red;">Aqui</span></b>
+    <br>
+    <p>Esta é uma das maneiras mais vistas no mercado hoje. Mas abaixo deixarei uma outra maneira mais organizada de se fazer.</p>
+    <p>------------------------------------------------------------------------------------------------------------------------</p>
+
+    <!--Exemplo Add CSS p/ Link-->
+    <p>Bom este método se torna mais organizado pois não utilizaremos os memso documento para criação do nosso CSS,
+        por outro lado, nós utilizaremos um aruivo CSS, que é possível criar no VSCode, abrindo um arquivo novo e salvando-o como
+        &quot;.css&quot;. Neste arquivo criaremos todo o nosso CSS e para importa-lo para o HTML, utilizamos a tag:
+    </p>
+    <code style="font-size: large;">&lt;link</code> <links>rel</links>=<orange>&quot;stylesheet&quot;</orange>
+    <links>href</links>= <orange>&quot;nome_do_arquivo.css&quot;</orange>>
+    <br>
+    <br>
+    
+    <!--Comentários-->
+    <h2>Comentários</h2>
+
+    <dt>- Não vão afetar o código</dt>
+    <dt>- Nos ajudam a lembrar blocos de códigos</dt>
+    <dt>- Deixa dicas para leitura</dt>
+    <dt>- Ajuda outros a entenderem</dt>
+    <dt>- Nunca esqueça de fechar um comentário aberto</dt>
+    <dt>- Podemos usar para desabilitar uma parte do código</dt>
+
+    <p>No CSS os comentários são iniciados por <code style="font-size: large;">/*</code> e terminados com <code style="font-size: large;">*/</code>.</p>
+
+    <!--Anatomia-->
+    <h2>Anatomia</h2>
+
+    <p>Vamos entender agora a anatomia do CSS e como é feita a conexão dele com o HTML.</p>
+
+    <dt>- Selector: é a tag que dirigiremos os comandos de CSS, exemplo <code style="font-size: large;">h1</code>,
+        o selector vai procurar no documento HTML por esses <code style="font-size: large;">h1</code> e onde houver, ele vai
+        aplicar as propriedades definidas pelo CSS, sejam elas, cor, fonte, tamanho de fonte, fundo;</dt>
+    <dt>- Declaration: é tudo que fica dentro das chaves, é a declaração do que o CSS deve aplicar ao HTML; </dt>
+    <dt>- Properties: são as propriedades que definiremos a cor, fonte, tamanho da fonte, etc. mas utilizamos nomenclaturas
+        em inglês, como <code style="font-size: large;">color</code>, <code style="font-size: large;">font-size</code>, <code style="font-size: large;">background-color</code>;</dt>
+    <dt>- Property Value: este é o valor que atribuimos à propriedade como azul para <code style="font-size: large;">color</code>, 30px para <code style="font-size: large;">font-size</code>
+        e white para <code style="font-size: large;">background-color</code>.</dt>
+    <br>
+    <em>OBS.: A chave do CSS é conhecer as mais diversas propriedades, pois com elas, mais edições e estilizações são possíveis.</em>
+
+    <!--Selectors-->
+    <h2>Selectors</h2>
+    <p>Conecta CSS ao HTML.</p>
+
+    <dt>Tipos:
+        <dd>- Global Selector: <orange>*</orange></dd>
+        <dd>- Element/Type Selector: <orange>h1, h2, div, p</orange></dd>
+        <dd>- ID Selector: <orange>#box, #container</orange></dd>
+        <dd>- Class Selector: <orange>.red , .m-4</orange></dd>
+        <dd><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obs.: o . antes do red e m-4 serve para dizer que eles são uma classe.</em></dd>
+        <dd>- Atribute Selector, Pseudo-Class, Pseudo-Element, entre outro.</dd>
+    </dt>
+    
+    <!--Box Model/Caixas-->
+    <h2>Box Model/Caixas</h2>
+
+    <p>O CSS trabalha com um modelo de box model, mas o que vem a ser essa caixa? Bom, é um retângulo.
+         Essa tem como propriedades:</p>
+    <dd>- Podem ficar uma em cima da outra, ou do lado;</dd>
+    <dd>- Elementos HTML no geral <em>são</em> caixas;</dd>
+    <dd>- Quase tudo no CSS são caixas;</dd>
+    <dd>- Tamanho: largura x altura / width x height, respectivamente;</dd>
+    <dd>- Conteúdo: content;</dd>
+    <dd>- Borda: border;</dd>
+    <dd>- Preenchimento Inteiro: padding;</dd>
+    <dd>- Espaços fora da box model: margin.</dd>
+
+    <!--Cascata-->
+    <h2>Cascata</h2>
+
+    <p>É o C de CSS, Cascading, a escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento</p>
+    <li>Estilo lido de cima para baixo (como uma cascata). Ou seja, cada comando de edição, para aplicar uma cor, fonte, etc. é lida de cima para
+        baixo, nessa mesma ordem onde podemos ter por exemplo:
+        <br><code style="font-size: large;">&lt;h1</code> {
+            <br>    color: red <br>
+        }
+        <br><code style="font-size: large;">&lt;h1</code> {
+            <br>    color: blue <br>
+        }
+        <p>Ele pegará a formatação de cor vermelha para o texto, mas em seguida vem a formatação para azul, então essa será
+            a formatação aparente.
+        </p>
+    </li>
+    <br>
+    <dt>É levado em consideração 3 (três) fatores:</dt>
+    <ol>
+        <li>Origem do Estilo</li>
+        <li>Especificidade</li>
+        <li>Importância</li>
+    </ol>
+    <!--Origem do Estilo-->
+    <h3>Origem do Estilo</h3>
+
+    <p>Um <links>inline</links> é muito mais &quot;forte&quot; que um <links>tag style</links>, que por sua vez é mais &quot;forte&quot;
+    que um <links>tag link</links>. Calma, se você não entendeu o que são cada atributo desses veja o exemplo:</p>
+    <!--Exemplo Inline-->
+    <p><b>Exemplo Inline:</b>
+
+    <dt><code style="font-size: large;">&lt;h1</code> <links>style</links>= <orange>"color: greenyellow"</orange>>
+    Exemplo <code style="font-size: large;">&lt;h1&gt;</code></dt>
+    </p>
+
+    <!--Exemplo Tag Style-->
+    <p><b>Exemplo Tag Style:</b>
+    
+    <dt><code style="font-size: large;">&lt;style&gt;</code><br>
+        <code style="font-size: large;">h1</code> {<br> color: brown<br> }
+        <br><code style="font-size: large;">&lt;/style&gt;</code></dt>
+    </p>
+
+    <!--Exemplo Tag Link-->
+    <p><b>Exemplo Tag Link:</b></p>
+
+    <dt><code style="font-size: large;">&lt;link</code> <links>rel</links>= <orange>&quot;stylesheet&quot</orange>
+        <links>href</links>= <orange>&quot;nome_do_arquivo.css&quot;</orange>><br>
+        <br><dt>Explicação: Digamos que esse código CSS abaixo esteja em um arquivo X, e estamso trabalhando no arquivo Y, utilizamos
+            a <links>tag link</links> para fazer a importação desse CSS.<br><br>
+        </dt>
+        <code style="font-size: large;">&lt;style&gt;</code><br>
+        <code style="font-size: large;">h1</code> {<br> color: yellow<br> }
+        <br><code style="font-size: large;">&lt;/style&gt;</code></dt>
+    </p>
+
+    <!--Especificidade-->
+    <h2>Especificidade</h2>
+    
+    <p>É um cálculo matemático onde, cada tipo de origem do estile e seletores, possuem valores que devem sempre ser
+        considerados.
+    </p>
+    <dt>0. Universal selector, combinators e negation pseudo-class (:not())</dt>
+    <dt>1. Element type selector e pseudo-element (::before, ::after)</dt>
+    <dt>10. Classes e attribute selectors. Exemplo: <links>class</links>=<orange>&quot;title&quot;</orange></dt>
+    <dt>100. ID Selector. Exemplo: <links>id</links>=<orange>&quot;my-title&quot;</orange></dt>
+    <dt>1000. Inline. Exemplo: <links>style</links>=<orange>&quot;color: gray&quot;</orange></dt>
+
+    <!--Regra !important-->
+    <h2>Regra !important</h2>
+
+    <p>Tenha em mente 3 coisas:
+        <dt>- Evite o uso</dt>
+        <dt>- Não é considerado uma boa prática</dt>
+        <dt>- Quebra o fluxo natural da cascata</dt>
+    </p>
+    <dt>Para que serve? Ela se ultrapassa aquele esquema das &quot;forças&quot; que são aplicadas, de fato, pode
+        e provavelmente vai acontecer um dia de você ter de usar, como exemplo, você está usando a biblioteca de alguém,
+        e por mais que tente não consegue fazer a alteração de CSS desejada, bem, neste caso sim, usa-se essa regra, mas,
+        como fazemos para usá-la? Simples, vá até a formatação que deseja, lá em <links>style</links> e adicione:
+        <orange>!important</orange>
+    </dt>
+
+    <!--At Rules-->
+    <h2>At Rules</h2>
+
+    <p>Tem relação com o comportamento do CSS. Para usarmos, iniciamos com <orange>&quot;@&quot;</orange>
+    seguido do identificador de valor.</p>
+    <!--Ex Identificadores-->
+    <h4 style="color: black;">Exemplos de identificadores:</h4>
+    <dt>- @import: Importa um arquivo CSS externo;</dt>
+    <dt>- @media: São regras <em>condicionais</em> para dispositivos;</dt>
+    <dt>- @font-face: Fontes externas;</dt>
+    <dt>- @keyframes: Animação.</dt>
+    <!--Ex na prática-->
+    <h4 style="color:black">Exemplos Práticos:</h4>
+    <dt>@import:</dt>
+    <dd><code style="font-size: large;">@import</code> <links>url</links>(<orange>&quot;link_vem_aqui&quot;</orange>);</dd>
+    <dd><code style="font-size: large;">@import</code> <orange>&quot;link_vem_aqui&quot;</orange>;</dd>
+    <dt>@media:</dt>
+    <dd><code style="font-size: large;">@media</code> (<links>min-width</links>: <orange>500px</orange> {<br><coment>aqui_vem_as_regras</coment><br>}</dd>
+    <dt>@font-face:</dt>
+    <dd><code style="font-size: large;">@font-face</code> {<br><coment>aqui_vem_as_regras</coment><br>}</dd>
+    <dt>@keyframes</dt>
+    <dd><code style="font-size: large;">@keyframes</code> nameofanimation {<br><coment>aqui_vem_as_regras</coment><br>}</dd>
+
+    <p>Mais para frente veremos melhor essas regras, não se preocupe.</p>
+
+    <!--ShortHand-->
+    <h2>Shorthand</h2>
+
+    <p>É uma <em>junção de propriedades</em> que utilizamos diversas ideais do CSS de uma maneira <em>resumida</em>,
+        e claro, de uma forma mais <em>legível</em>.
+    </p>
+
+    <dl>Aí você se pergunta &quot;Como faço essa junção de propriedades resumida e legível?&quot.</dl>
+    <dt>Veja nos exemplo práticos abaixo:</dt><br>
+    
+    <!--Ex práticos Shorthand-->
+    <!--background-->
+    <dt>Background: temos algumas propriedades, que estudaremos mais a fundo em seguida.</dt>
+    <dt>Ao invés de colocarmos linha por linha as propriedades do Background, colocaremos na mesma linha:</dt>
+    <br><dt><code style="font-size: large;">background</code>: #000 <links>url</links>(imagem_linkada)<orange> no-repeat left top</orange>;</dt>
+    <br>Veja como seria sem Shorthand:
+    <br><code style="font-size: large;">background-color</code>: #000;
+    <br><code style="font-size: large;">background-image</code>: <links>url</links>(imagem_linkada);
+    <br><code style="font-size: large;">background-repeat</code>: <orange>no-repeat</orange>;
+    <br><code style="font-size: large;">background-position</code>: left-top;
+    <br><br>
+    <!--font--->
+    <dt>Font: propriedades relacionadas a fonte como, tamanho, estilo, tamanho da linha, fonte da letra...</dt>
+    <br>
+    <dt><code style="font-size:large;">font</code>: <orange>italic bold </orange>.<links>8em/1.2</links> <orange>Arial</orange>, <orange>sans-serif</orange>;</dt>
+    <br>Sem utilizar Shorthand:
+    <br><code style="font-size: large;">font-style</code>: <orange>italic</orange>;
+    <br><code style="font-size: large;">font-weight</code>: <orange>bold</orange>;
+    <br><code style="font-size: large;">font-size</code>: .<orange><links>8em</links></orange>;
+    <br><code style="font-size: large;">line-height</code>: <orange>1.2</orange>;
+    <br><code style="font-size: large;">font-family</code>: <orange>Arial</orange>, <orange>sans-serif</orange>;
+
+    <!--Detalhes-->
+    <h3>Detalhes:</h3>
+
+    <li>Shorthand não vai considerar propriedades anteriores;</li>
+    <li>Valores que não forem especificados receberão valores padrões;</li>
+    <li>A ordem descritas das propriedades não importa tanto, pois se houver propriedades com valores muito semelhantes, pode-se
+        encontrar problemas.
+    </li>
+
+    <!--Propriedades que aceitam Shorthand-->
+    <h2>Propriedades que aceitam Shorthand:</h2>
+
+    animation, background, border, border-bottom, borde-color, border-left, border-radius, border-right, border-style,
+     border-top, border-width, column-rule, columns, flex, flex-flow, font, grid, grid-area, grid-column, grid-row, 
+    grid-template, list-style, margin, offset, outline, overflow, padding, place-content, place-items, place-self, 
+    text-decoration, transition, entre outros...
+    <br>Se quiser saber masi sobre as propriedades que aceitam Shorthand, recomendo que acessem o site da 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties" title="Mozilla Developer Network">MDN</a>.
+    
+    <!--Funções-->
+    <h2>Funções</h2>
+    Funções nada mais são que um nome seguido de abre e fecha aprentesis, esse nome recebe argumentos (informações),
+    veja o exemplo:<br>
+    <code style="font-size: large;">color</code>: <links title="Função RGB"><b>rgb</b></links>(<orange title="argumentos da função">255, 0, 100</orange>);
+    <br>
+    <code style="font-size: large;">width</code>: <links title="Função Cálculo"><b>calc</b></links>(<orange title="argumentos da função">100% - 10px</orange>);
+
+</body>
+</html>

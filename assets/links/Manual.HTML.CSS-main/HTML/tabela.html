@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="index.html" target="_blank">Conceito</a></li>
+                    <li><a href="elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="links.html" target="_blank">Links </a></li>
+                    <li><a href="tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="../CSS/introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="../CSS/medidasCSS.html" target="_blank">Ir para Medidas</a></li>
+                    <li><a href="../CSS/backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="../CSS/boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+    
+    <h1>Tabelas HTML</h1>
+
+    <dl>
+        <dt><b> Prós </b></dt>
+              <dd> - Visualização de dados via linhas e colunas </dd>
+              <dd>- Boa acessibilidade para leitura dos dados</dd>
+         <dt><b> Contras</b></dt>
+              <dd>- Pouco flexível </dd>
+              <dd>- Precisa de estilização para melhor visualização</dd>
+         <dt><b>Não usar</b></dt>
+              <dd>- Para criar seu layout </dd>
+    </dl>
+    
+    <!--Tabela Simples-->
+    <h2>Tabela Simples</h2>
+    
+    <dt>Para criarmos uma tabela, usamos a tag <code style="font-size: large;">&lt;table&gt;</code> ;</dt>
+    <dt>Dentro da tag <code style="font-size: large;">&lt;table&gt;</code>, utilizaremos a tag <code style="font-size: large;">&lt;tr&gt;</code>, que quer dizer <em>Table Row</em>,
+    ou no português, Linha de Tabela ;</dt>
+    <dt>Dentro da tag <code style="font-size: large;">&lt;tr&gt;</code>, podemos colocara tag <code style="font-size: large;">&lt;th&gt;</code>, que vem a ser o cabeçalho ;</dt>
+    <dt>Dentro da tag <code style="font-size: large;">&lt;tr&gt;</code>, utilizamos a tag <code style="font-size: large;">&lt;td&gt;</code>, para inserir o conteúdo da linha.</dt>
+    
+    <p>Veja como fica na prática o código:</p>
+    <dl>
+        <dt><code style="font-size: large;">&lt;table&gt;</code></dt>
+            <dd><code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th&gt;</code> 
+                Nome
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th&gt;</code> 
+                Idade
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                <em>nome</em>
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                <em>18</em>
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;/tr&gt;</code></dd>
+    <code style="font-size: large;">&lt;/table&gt;</code>
+    </dl>
+
+    <p>Na prática, o que termos é:</p>
+
+    <table>
+        <tr>
+             <th> Nome </th>
+             <th> Idade </th>
+        </tr>
+        <tr>
+             <td> <em>Nome</em> </td>
+             <td> <em>18</em> </td>
+        </tr>
+    </table>
+
+    <!--Organizando a Tabela-->
+    <h2>Organizando a Tabela</h2>
+
+    <p>Já vimos como criar uma tabela simples certo? Bom, agora vamos organizar ela um pouco e para isso, teremos algumas tags que serão apresentadas:</p>
+    <!--caption-->
+    <dt><code style="font-size: large;">&lt;caption&gt;</code> : Vem a ser a descrição do que tem na nossa tabela. Exemplo:
+    </dt>
+    <br>
+    <dt><code style="font-size: large;">&lt;caption&gt;</code> Pessoas por Idade</dt>
+    <br>
+    <!--colgroup-->   
+    <dt><code style="font-size: large;">&lt;colgroup&gt;</code> : Tag usada para agrupar as colunas da tabela.
+    </dt>
+    <br>
+    <dt>Dentro da tag <code style="font-size: large;">&lt;colgroup&gt;</code> temos a tag <code style="font-size: large;">&lt;col&gt;</code>
+    para gerenciarmos o estilo das colunas.</dt>
+    <p>-------------------------------------------------</p>
+
+
+    <!--thead-->
+    <dt><code style="font-size: large;">&lt;thead&gt;</code>, que seria <em>Table Head</em>, no português, Cabeça da Tabela/Cabeçalho.
+        Então, tudo que for fazer parte do cabeçalho fica aqui dentro, exemplo:</dt>
+        <dl>
+        <dt><code style="font-size: large;">&lt;table&gt;</code>
+            <dt><code style="font-size: large;">&lt;caption&gt;</code> Pessoas por Idade<code style="font-size: large;"> &lt;/caption&gt;</code></dt>
+            <dd><code style="font-size: large;">&lt;thead&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th&gt;</code> 
+                Nome
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th&gt;</code> 
+                Idade
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;/thead&gt;</code></dd>
+        <dt><code style="font-size: large;">...</code></dt>
+        </dl>
+
+    <p>-------------------------------------------------</p>
+
+    <!--tbody-->
+    <code style="font-size: large;">&lt;tbody&gt;</code>, que é o nosso <em>Table Body</em>, Corpo da Tabela/Conteúdo da Tabela. Logo, tudo que for de conteúdo
+    vira para dentro do <code style="font-size: large;">&lt;tbody&gt;</code>, exemplo:
+    <dl>
+        <dt><code style="font-size: large;">...</code>
+            <dd><code style="font-size: large;">&lt;tbody&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                Nome
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                Idade
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;/tbody&gt;</code></dd>
+        <dt><code style="font-size: large;">...</code></dt>
+        </dl>
+    <p>-------------------------------------------------</p>
+
+    <!--tfoot-->
+    <code style="font-size: large;">&lt;tfoot&gt;</code>, que é o nosso <em>Table Foot</em>, Rodapé. Nele, colocaremos por exemplo <em>Total de Pessoas</em>, exemplo:
+    <dl>
+        <dt><code style="font-size: large;">...</code>
+            <dd><code style="font-size: large;">&lt;tfoot&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                Total de Pessoas
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code> 
+                    2
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+               <dd><code style="font-size: large;">&lt;/tfoot&gt;</code></dd>
+        <dt><code style="font-size: large;">&lt;/table&gt;</code></dt>
+        </dl>
+    <h4>Como resultado, teremos:</h4>
+
+    <table>
+        <caption> Pessoas por Idade </caption>
+        <thead>
+             <tr>
+                  <th> Nome </th>
+                  <th> Idade </th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                 <td> Nome </td>
+                 <td> Idade </td>
+            </tr>
+       </tbody>
+       <tfoot>
+        <tr>
+             <td> Total de Pessoas </td>
+             <td> 2 </td>
+        </tr>
+        </tfoot>
+   </table>
+   <p>-------------------------------------------------</p>
+
+   <!--Tabela Complexa-->
+   <h2>Tabela Complexa</h2>
+
+   <dl>Nesse tópico abordaremos a criação de uma tabela complexa, mas calma,
+    tudo será explicado da melhor maneira possível. Para exemplificar, faremos uma tabela que:
+        <dd>- Terá 2 (duas) lojas;</dd>
+        <dd>- Cada loja terá os mesmos 2 (dois) produtos;</dd>
+        <dd>- Terá a quantia de produtos produzidos e vendidos por cada uma das lojas.</dd>
+    </dl>
+    <p>-------------------------------------------------</p>
+
+    <em>OBS.: Precisaremos deixar uma célular em branco, utilizaremos o atributo <links>rowspan</links> seguido 
+        de <orange>"2"</orange> que é o numero de linhas que precisamos em branco, além do <links>rowspan</links>
+        utilizaremos <links>colspan</links> seguido de <orange>"2"</orange>para deixarmos as colunas em branco para que fique de acordo e mais organizado.
+        Tem-se o atributo <links>scope</links> que utilizaremos para dizermos para cada item à qual categoria ele se encaixa, exemplo:
+    <p><links>col</links>; <links>colgroup</links>; <links>row</links> e <links>rowgroup</links></p>
+    Sendo:<br>
+    Col - Colunas;<br>
+    Colgroup - Grupo de Colunas;<br>
+    Row - Linha;<br>
+    Rowgroup - Grupo de Linhas.</em>
+
+    
+    <p>-------------------------------------------------</p>
+    <p><coment>&lt;!--Table, Caption e Colgroup--&gt;</coment></p>
+    <dl><!--Table Head-->
+        <dt><code style="font-size: large;">&lt;table&gt;</code>
+            <!--Caption-->
+            <dd><code style="font-size: large;">&lt;caption&gt;</code> Lojas e Produtos<code style="font-size: large;"> &lt;/caption&gt;</code></dd>
+            <!--Colgroup-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large" >&lt;colgroup&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!--Col-->
+            <code style="font-size: large" >&lt;col&gt;</code></dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code style="font-size: large" >&lt;col</code> <links>span</links>=<orange>&quot;2&quot;</orange><links>style</links>=<orange>&quot;background-color: aqua &quot;</orange>></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code style="font-size: large" >&lt;col</code> <links>span</links>=<orange>&quot;2&quot;</orange><links>style</links>=<orange>&quot;background-color: greenyellow &quot;</orange>></dd>
+            <!--/Colgroup-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large" >&lt;/colgroup&gt;</code></dd>
+        <dt><code style="font-size: large;">...</code></dt>   
+    <p>-------------------------------------------------</p>
+    <p><coment>&lt;!--Table Head--&gt;</coment></p>
+    <dt><code style="font-size: large;">...</code></dt>
+            <!--Thead-->
+            <dd><code style="font-size: large;">&lt;thead&gt;</code></dd>
+            <!--TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <!--TH Rowspan-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th</code>
+            <links>rowspan</links>=<orange>&quot;2&quot;</orange><code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <!--TH Loja 1-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th</code> <links>colspan</links>
+            =<orange>&quot;2&quot;</orange> <links>scope</links>=<orange>&quot;colgroup&quot;</orange>> Loja 1
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <!--TH Loja 2-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th</code> <links>colspan</links>
+            =<orange>&quot;2&quot;</orange> <links>scope</links>=<orange>&quot;colgroup&quot;</orange>> Loja 2
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <!--/TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <br>
+            <!--TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td</code> <links>scope</links>=<orange>&quot;col&quot</orange>>
+                 Produzidos Loja 1
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td</code> <links>scope</links>=<orange>&quot;col&quot</orange>>
+                Vendidos Loja 1
+           <!--/TD-->
+           <code style="font-size: large;">&lt;/td&gt;</code></dd>
+           <!--TD-->
+           <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td</code> <links>scope</links>=<orange>&quot;col&quot</orange>>
+            Produzidos Loja 2
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td</code> <links>scope</links>=<orange>&quot;col&quot</orange>>
+            Vendidos Loja 2
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--/TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <!--/Thead-->
+            <dd><code style="font-size: large;">&lt;/thead&gt;</code></dd>
+        <dt><code style="font-size: large;">...</code></dt>
+    </dl>
+    <p>-------------------------------------------------</p>
+                
+    <p><coment>&lt;!--Table Body--&gt;</coment></p>
+    
+    <dl>
+        <dt><code style="font-size: large;">...</code>
+            <!--Table Body-->
+            <dd><code style="font-size: large;">&lt;tbody&gt;</code></dd>
+            <!--TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <!--TH-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th</code> <links>scope</links>=<orange>&quot;row&quot</orange>>
+                Produto 1
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                20
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                15
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                10
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                10
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--/TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <br>
+            <!--TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;tr&gt;</code></dd>
+            <!--TH-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;th</code> <links>scope</links>=<orange>&quot;row&quot</orange>>
+                Produto 2
+            <code style="font-size: large;">&lt;/th&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                50
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                45
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                40
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--TD-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;td&gt;</code>
+                25
+            <!--/TD-->
+            <code style="font-size: large;">&lt;/td&gt;</code></dd>
+            <!--/TR-->
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="font-size: large;">&lt;/tr&gt;</code></dd>
+            <dd><code style="font-size: large;">&lt;/tbody&gt;</code></dd>
+        <dt><code style="font-size: large;">...</code></dt>
+    </dl>
+    <p>-------------------------------------------------</p>
+
+    <h4>Resultado Tabela Complexa</h4>
+
+    <table>
+        <caption> Lojas e Produtos </caption>
+            <colgroup>
+                <col>
+                <col span="2" style="background-color: aqua">
+                <col span="2" style="background-color: greenyellow;">
+            </colgroup>
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan ="2" scope="colgroup"> Loja 1 </th>
+                <th colspan ="2" scope="colgroup"> Loja 2 </th>
+            </tr>
+            <tr>
+                <td scope="col"> Produzidos Loja 1 </td>
+                <td scope="col"> Vendidos Loja 1 </td>
+                <td scope="col"> Produzidos Loja 2 </td>
+                <td scope="col"> Vendidos Loja 2 </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> Produto 1 </th>
+                <td> 20 </td>
+                <td> 15 </td>
+                <td> 10 </td>
+                <td> 10 </td>
+            </tr>
+            <tr>
+                <th scope="row"> Produto 2 </th>
+                <td> 50 </td>
+                <td> 45 </td>
+                <td> 40 </td>
+                <td> 25 </td>
+            </tr>
+       </tbody>
+    </table>
+    <p>-------------------------------------------------</p>
+
+    <p>De certa forma é uma tabela simples, mas, se você chegou até aqui, seguindo os passos,
+        percebe que faz jus ao nome &quot;Complexa&quot.</p>
+    <br>
+    
+</body>
+</html>

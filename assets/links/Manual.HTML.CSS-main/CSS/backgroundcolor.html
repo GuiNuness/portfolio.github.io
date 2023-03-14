@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores e Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align:justify;
+            background-color:aliceblue;
+            color:black;
+            font-size: medium;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(6, 58, 155, 0.863);
+        }
+        nav ul{
+           float: left;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-size: 15px;
+            padding: 11px 14px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color:rgb(255, 255, 255);
+        }
+        nav ul li ul{
+            display: none;
+            position: relative;
+            background-color: rgb(113, 188, 253);
+            padding: 12px;
+            border-radius: 0px 0px 5px 5px;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            width: 180px;
+            border-radius: 4px;
+        }
+        nav ul li ul li a{
+            padding: 8px 10px;
+        }
+        nav ul li ul li a:hover{
+            background-color:#337aff;
+        }
+        h1 {
+            color:rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgb(71, 71, 63) ;
+        }
+        h4 {
+            color: rgb(255, 0, 0) ;
+        }
+        class{
+            color: rgb(25, 0, 255);
+        }
+        links{
+            color: #0089eb;
+        }
+        orange{
+            color: rgb(255, 104, 50);
+        }
+        t{
+            color:rgb(0, 0, 0);
+        }
+        coment{
+            color: rgb(0, 168, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Menu de Navegação-->
+    <nav>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="../HTML/conceitos.html" target="_blank">Conceito </a></li>
+                    <li><a href="../HTML/elementos.html" target="_blank">Elementos </a></li>
+                    <li><a href="../HTML/cabeçalho.html" target="_blank">Cabeçalho </a></li>
+                    <li><a href="../HTML/links.html" target="_blank">Links </a></li>
+                    <li><a href="../HTML/tabela.html" target="_blank">Tabelas </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="introduçãoCSS.html" target="_blank">Ir para Introdução</a></li>
+                    <li><a href="medidasCSS.html" target="_blank">Ir para Medidas </a></li>
+                    <li><a href="backgroundcolor.html" target="_blank">Ir para Background</a></li>
+                    <li><a href="boxmodel.html" target="_blank">Ir para Box Model</a></li>
+                </ul>
+            </li> 
+        </ul>
+    </nav>
+
+    <!--Cores e Background-->
+    <h1>Cores e Background</h1>
+
+    <!--Cores-->
+    <h2>Cores</h2>
+    <P>Usamos CSS para dar cores e vida ao nosso documento</P>
+
+    <!--Tipos-->
+    <dt style="font-size: large;"><b>Tipos:</b>
+        <dd>background-color (para fundo das caixas);</dd>
+        <dd>color (para textos);</dd>
+        <dd>border-color (para borda das caixas);</dd>
+        <dd>Entre outros...</dd>
+    </dt>
+    <br>
+    <!--Valores-->
+    <dt style="font-size: large;"><b>Valores:</b> 
+        <dd>palavra-chave (blue, transparent)</dd>
+        <dd>hexadecimal (#990011)</dd>
+        <dd>funções: rgb, rgba, hsl, hsla</dd>
+    </dt>
+    <h4>Exemplo</h4>
+
+    <em>Currentcolor = palavra chave da cor.</em><br>
+    <code style="font-size: large;">element</code> {
+    <br><links>color</links>: <orange> currentcolor</orange>;<br>
+    }
+    <br><br>
+    <em>Aqui temos as próprias cores.</em><br>
+    <code style="font-size: large;">element</code> {
+        <br><links>color</links>: <orange> red</orange>;
+        <br><links>color</links>: <orange> orange</orange>;
+        <br><links>color</links>: <orange> blue</orange>;
+        <br><links>color</links>: <orange> brown</orange>;<br>
+    }
+    <br><br>
+    <em>Hexadecimal teremos:</em><br>
+    <code style="font-size: large;">element</code> {
+        <br><links>color</links>: <orange> #841 <em>(red, green, blue)</em></orange>;
+        <br><links>color</links>: <orange> #995522</orange>;
+        <br><links>color</links>: <orange> #927a <em>(o "a" representa transparência da cor)</em></orange>;
+        <br><links>color</links>: <orange> #000099aa</orange>;<br>
+    }
+    <br><br>
+    <em>RGB (red, green, blue) Values</em><br>
+    <code style="font-size: large;">element</code> {
+        <br><links>color</links>: <orange> rgb(240, 15, 64, 0.5) <em>(Aqui o 4 elemento informado é a transparência, podendo ser número decimal ou porcentagem)</em></orange>;
+        <br><links>color</links>: <orange> rgba(255, 155, 210, 0.9)</orange>;<br>
+    }
+    <br><br>
+    <em>HSL (hue, saturation, luminance) Values</em><br>
+    <code style="font-size: large;">element</code> {
+        <br><links>color</links>: <orange> hsl(35, 90%, 50%, 0.6) <em>(Aqui o 4 elemento informado é a transparência, podendo ser número decimal ou porcentagem)</em></orange>;
+        <br><links>color</links>: <orange> hsla(255, 155, 210, 40%)</orange>;<br>
+    }
+    <br>
+    <em>Para entender melhor o HSL veja algumas imagens <a href="https://www.google.com/search?q=hsl&rlz=1C1FCXM_pt-PTBR999BR999&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjsvKmUn4_3AhXbspUCHai4AagQ_AUoAXoECAcQAw&biw=1920&bih=969&dpr=1" target="_blank">aqui</a>.</em>
+    <br><br>
+    <em>Global Values</em>
+    <code style="font-size: large;">element</code> {
+        <br><links>color</links>: <orange> inherit <em>(inherit = herança)</em></orange>;
+        <br><links>color</links>: <orange> initial <em>(initial = inicial)</em></orange>;
+        <br><links>color</links>: <orange> unset <em>(unset = não atribuído)</em></orange>;<br>
+    }
+
+    <p>Para saber mais sobre cores acesse a página de cores no <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/color_value" target="_blank">MDN</a>.</p>
+
+    <!--Background-->
+    <h2>Background</h2>
+    <dt>1. Define um fundo para o elemento;</dt>
+    <dt>2. Área de atuação é a caixa toda;</dt>
+    <dt>3. É transparente, por padrão, mas pode ser editado.</dt>
+    <br>
+    <dt style="font-size: 17px;"><b>Exemplos:</b>
+    <dt>1) Usar cores sólidas;</dt>
+    <dt>2) Usar imagens como fundo;</dt>
+    <dt>3) Controlar:
+        <dd>- Posição de imagens;</dd>
+        <dd>- Se repetem ou não;</dd>
+        <dd>- Tamanho das imagens na caixa.</dd>
+    </dt>
+    <dt>4) Usar cor de imagem juntas;</dt>
+    <dt>5) Usar e criar gradientes.</dt>
+
+    <!--Background-Color-->
+    <h3>Background-Color</h3>
+    <P>Definimos por ele a cor de fundo do documento, sendo a cor tipo RGB, color, etc...</P>
+
+    <!--Background-image-->
+    <h3>Background-Image</h3>
+    <p>Pelo <orange>background-image</orange> colocaremos uma imagem como nosso plano de fundo do documento, podendo ser url ou de um arquivo do seu próprio dispositivo.
+        Podemos escolher também se a imagem vai ou não se repetir, pois dependendo do seu tamanho, por padrão ela repetirá para o eixo X e Ypara preencher totalmente o background.
+        Para que a imagem não se repita faremos: <orange>background-repeat</orange>: <links>no-repeat</links>;<br>
+        Porém podemos definir que essa imagem repita apenas em um dos eixos, seja ele vertical (Y) ou Horizontal (X):
+        <orange>background-repeat</orange>: <links>repeat-y</links>; ou <orange>background-repeat</orange>: <links>repeat-x</links>;
+    </p>
+
+    <!--Background-Position-->
+    <h3>Background-Position</h3>
+    <p>Por ele é possível alterarmos a posição da nossa imagem com os atributos de posição: top, right, bottom, left e center;
+        Podemos mesclar os atributos direcionando a imagem para ficar no canto superior direito por exemplo.
+    </p>
+
+    <!--Background-Size-->
+    <h3>Background-Size</h3>
+    <p>Usado para definirmos o tamanho da imagem. Aqui há um atributo interessante o <links>contain</links>, ele conterá a imagem dentro da Box dela.
+        Também há o <links>cover</links> que vai expandir a imagem fora a fora. Porém, podemos definir o tamanho da imagem por porcentagem,
+        mas fique atento, colocando apenas um valor ele se aplicará para largura da imagem, deixando altura automática e colocando o 2° valor, o mesmo 
+        será atribuido para altura da mesma.<br>
+        Podemos usar os valores de redimensionamento como: em, px...
+    </p>
+
+    <!--Background-Origin-->
+    <h3>Background-Origin</h3>
+    <p>Permite definirmos onde nossa imagem iniciará, através de seus atributos, como: <links>border-box</links>,
+        <links>content-box</links>(padrão), <links>padding-box</links>(partindo do padding)
+    </p>
+
+    <!--Background-Attachment-->
+    <h3>Background-Attachment</h3>
+    <p>Controla o scroll da imagem, ou seja, quando "scrollar" a página a imagem ficará fixa onde está ou acompanhará? Bom, 
+        pelo <orange>background-attachment</orange> podemos definir isso.<br>
+        <orange>background-attachment</orange>: <links>fixed</links> | <orange>background-attachment</orange>: <links>scroll</links>;
+    </p>
+
+    <!--Gradiente-->
+    <h2>Gradiente</h2>
+    <p>Podemos criar um gradiente para nosso <orange>background</orange> definindo-o como linear ou radial por exemplo e informando suas cores, além é claro
+        de ser possível direcionar o angulo dele com <links>deg</links>.
+    </p>
+    <br>
+    <br>
+    <em>OBS.: Podemos juntar todos os atributos Background que criamos em sua Shorthand, como foi visto.</em>
+</body>
+</html>
