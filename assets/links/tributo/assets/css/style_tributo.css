@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+    background-color: black;
+}
+
+header{
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(107, 107, 107);
+
+}
+
+#tonyh{
+    height: 120px;
+    margin-right: 75px;
+    opacity: 0.5;
+}
+
+.ironman{
+    display: flex;
+    justify-content: right;    
+}
+
+#ironman{
+    display: flex;
+    height: 120px;
+    opacity: 0.5;
+    margin-left: 75px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    width: 220px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;  
+}
+
+.subtitle{
+    color: white;
+    width: 500px;
+    margin: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.headline{
+    margin: 5px;
+    height: 2px;
+    width: 550px;
+    background-color: rgb(255, 196, 0);
+}
+
+.foto{
+    opacity: 1;
+    margin-top: 30px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom, white, black);
+    border-image-slice: 1;
+}
+
+p{
+    width: 650px;
+    display: flex;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 15px;
+    text-indent: 25px;
+    margin: 10px;
+}
+
+.biografia{
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, yellow, red);
+    border-image-slice: 1;
+}
+
+.saibamais{
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.saibamais a{
+    color: yellow;
+}
